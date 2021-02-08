@@ -1,5 +1,42 @@
+@import "https://fonts.googleapis.com/css2?family=Anton&display=swap:wght@700&family=Raleway:wght@400;900&display=swap";
+
+h1 {
+    font-family: 'Anton', sans-serif; 
+    padding: 12px;
+    font-size: 60px;
+}
+
+.small {
+    font-size: 20px;
+}
+
 .navbar a {
-  padding: 12px;
-color: black;
- 
+    padding: 12px;
+    color: black;
+    font-family: 'Anton', sans-serif;
+}
+
+.nav-link:hover {
+    
+}
+
+.navbar a:hover {
+    text-decoration: solid purple;
+}
+
+.form-control {
+font-family: 'Anton', sans-serif;
+}
+
+
+/* Buttons */
+
+.btn {
+    border:none;
+    font-family: 'Anton', sans-serif;  
+}
+
+.btn:hover {
+    background-color: purple;
+    box-shadow: none;
 }
