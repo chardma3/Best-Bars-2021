@@ -25,15 +25,25 @@
                     <ul id="menu-main-nav" class="navbar-nav nav-fill w-100">
                         <li id="menu-item-1" class="nav-item  menu-item-1"><a href="" class="nav-link">HOME</a>
                         </li>
-                        <li id="menu-item-2"
-                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a
-                                href="{{ url_for('login') }}" class="nav-link">LOGIN</a></li>
-                        <li id="menu-item-3"
-                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a
-                                href="{{ url_for('register') }}" class="nav-link">REGISTER</a></li>
-                        <li id="menu-item-4"
+                        {% if session.user %}
+                            <li id="menu-item-4"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
-                                href="{{ url_for('profile', username=session['user']) }}" class="nav-link">PROFILE</a></li>
+                            href="{{ url_for('profile', username=session['user']) }}" class="nav-link">PROFILE</a></li>
+                            <li id="menu-item-5"
+                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
+                            href="" class="nav-link">REVIEW</a></li>
+                              <li id="menu-item-6"
+                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
+                            href="{{ url_for('logout', username=session['user']) }}" class="nav-link">LOG OUT</a></li>
+                        {% else %}
+                            <li id="menu-item-2"
+                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a
+                            href="{{ url_for('login') }}" class="nav-link">LOGIN</a></li>
+                            <li id="menu-item-3"
+                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a
+                            href="{{ url_for('register') }}" class="nav-link">REGISTER</a></li>
+                        {% endif %}
+
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-dark" type="submit">Search</button>
