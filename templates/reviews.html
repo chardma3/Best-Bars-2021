@@ -1,12 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for reviews in reviews %}
-        {{ reviews.bar_name }}<br>
-        {{ reviews.review }}<br>
-        {{ reviews.picture }}<br>
-        {{ reviews.fav_drink }}<br>
-        {{ reviews.location }}<br>
-    {% endfor %}
+{% for reviews in reviews %}
+{{ reviews.bar_name }}<br>
+{{ reviews.review }}<br>
+{{ reviews.picture }}<br>
+{{ reviews.fav_drink }}<br>
+{{ reviews.location }}<br>
+{% endfor %}
+<div class="container fluid">
+    <div class="row">
+        <div class="col card-reviews">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="col card-reviews">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}

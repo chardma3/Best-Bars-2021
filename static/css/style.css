@@ -29,7 +29,10 @@ font-family: 'Anton', sans-serif;
 }
 
 .flashes h4 {
-    line-height: 7;
+    line-height: 7em;
+}
+.card-reviews {
+    width: 18rem;
 }
 
 /* Buttons */
