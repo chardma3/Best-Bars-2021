@@ -10,26 +10,32 @@
 {% endfor %}
 <div class="container fluid">
     <div class="row">
+                         
+    {% for reviews in reviews %}
         <div class="col card-reviews">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{ reviews.picture }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title" >{{ reviews.bar_name }}<br></h5>
+                <p class="card-text">{{ reviews.review }}</p>
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{ reviews.fav_drink }}</li>
+                        <li class="list-group-item">{{ reviews.location }}</li>
+                    </ul>
             </div>
         </div>
+          {% for reviews in reviews %}
         <div class="col card-reviews">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{ reviews.picture }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title" >{{ reviews.bar_name }}<br></h5>
+                <p class="card-text">{{ reviews.review }}</p>
+                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{ reviews.fav_drink }}</li>
+                        <li class="list-group-item">{{ reviews.location }}</li>
+                    </ul>
             </div>
-        </div>
+    {% endfor %}
     </div>
 </div>
-
 
 {% endblock %}
