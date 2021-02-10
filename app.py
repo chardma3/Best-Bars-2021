@@ -99,9 +99,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/write_review")
+@app.route("/write_review", methods=["GET", "POST"])
 def write_review():
-    return render_template("write_review.html")
+    if request.method == "POST":
+        review = {
+            "bar_name": request.form.get("bar_name"),
+            "review": request.form.get("review"),
+            "picture": request.form.get("picture"),
+            "fav_drink": request.form.get("fav_drink"),
+            "location": request.form.get("location")
+        }
+        mongo.db.reviews.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("write_review"))
+
+    bars = mongo.db.bars.find().sort("bar_name", 1)
+    return render_template("write_review.html", bars=bars)
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@
       <div class="form-group">
         <div class="row">
           <div class="col">
-            <form method="POST" action="">
+            <form method="POST" action="{{ url_for('write_review') }}">
               <input type="text" class="form-control" name="bar_name" id="name" placeholder="Bar Name" required />
               <textarea rows="5" type="text" class="form-control" name="review" id="review" placeholder="Review" required ></textarea>
               <input type="picture" class="form-control" name="picture" id="picture" placeholder="Picture" />
