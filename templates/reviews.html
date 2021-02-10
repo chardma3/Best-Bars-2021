@@ -1,13 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for reviews in reviews %}
-{{ reviews.bar_name }}<br>
-{{ reviews.review }}<br>
-{{ reviews.picture }}<br>
-{{ reviews.fav_drink }}<br>
-{{ reviews.location }}<br>
-{% endfor %}
+
 <div class="container fluid">
     <div class="row">
                          
@@ -23,17 +17,6 @@
                     </ul>
             </div>
         </div>
-          {% for reviews in reviews %}
-        <div class="col card-reviews">
-            <img src="{{ reviews.picture }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title" >{{ reviews.bar_name }}<br></h5>
-                <p class="card-text">{{ reviews.review }}</p>
-                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ reviews.fav_drink }}</li>
-                        <li class="list-group-item">{{ reviews.location }}</li>
-                    </ul>
-            </div>
     {% endfor %}
     </div>
 </div>
