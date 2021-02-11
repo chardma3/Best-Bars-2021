@@ -6,6 +6,15 @@ h1 {
     font-size: 60px;
 }
 
+h3 {
+    font-family: 'Anton', sans-serif;  
+     
+}
+
+h4 {
+    font-family: 'Anton', sans-serif; 
+}
+
 .small {
     font-size: 20px;
 }
@@ -24,16 +33,37 @@ h1 {
     text-decoration: solid purple;
 }
 
-.form-control {
-font-family: 'Anton', sans-serif;
-}
-
 .flashes h4 {
     line-height: 7em;
+    color: purple;
+    font-family: 'Anton', sans-serif; 
 }
 .card-reviews {
     width: 18rem;
 }
+
+.profile-group {
+    margin: 0 auto;
+    max-width: 70%; 
+}
+
+/* Form */
+
+.form {
+    margin-top: 15px;
+}
+
+.form-group {
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+.form-button {
+    margin-top: 25px;
+    padding-bottom:15px;
+}
+
+
 
 /* Buttons */
 
@@ -45,4 +75,15 @@ font-family: 'Anton', sans-serif;
 .btn:hover {
     background-color: purple;
     box-shadow: none;
+}
+
+
+/* Media queries */
+
+@media(min-width: 992px) {
+    .form-group {
+        padding-top:30px;
+        margin: 0 auto;
+        max-width: 50%;
+        min-height:240px;
 }

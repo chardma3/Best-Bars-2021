@@ -43,7 +43,7 @@
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a
                             href="{{ url_for('register') }}" class="nav-link">REGISTER</a></li>
                         {% endif %}
-
+                        <!--search button-->
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-dark" type="submit">Search</button>
@@ -59,14 +59,14 @@
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                <div class="row flashes">
+                <div class="row flashes text-center">
                     <h4>{{ message }}</h4>
                 </div>
                 {% endfor %}
             {% endif %}
         {% endwith %}
     </section>
-    <main class="container">
+    <main class="container-fluid">
         {% block content %}
         {% endblock %}
     </main>
