@@ -6,6 +6,10 @@ h1 {
     font-size: 60px;
 }
 
+a {
+    color: black;
+}
+
 h3 {
     font-family: 'Anton', sans-serif;  
      
@@ -21,16 +25,15 @@ h4 {
 
 .navbar a {
     padding: 12px;
-    color: black;
     font-family: 'Anton', sans-serif;
 }
 
-.nav-link:hover {
-    
-}
-
-.navbar a:hover {
-    text-decoration: solid purple;
+a:hover {
+    color:purple;
+    text-decoration: solid underline purple 4px;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out;
 }
 
 .flashes h4 {
