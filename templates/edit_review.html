@@ -8,14 +8,15 @@
         <div class="row">
           <div class="col">
             <form method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
-              <input type="text" class="form-control" name="bar_name" id="name" placeholder="Bar Name" required />
-              <textarea rows="5" type="text" class="form-control" name="review" id="review" placeholder="Review" required ></textarea>
-              <input type="picture" class="form-control" name="picture" id="picture" placeholder="Picture" />
-              <input type="text" class="form-control" name="fav_drink" id="fav_drink" placeholder="Fav Drink" required />
-                <input type="text" class="form-control" name="location" id="location" placeholder="Location" required />
+              <input type="text" class="form-control" name="bar_name" id="name" value="{{ review.bar_name }}" placeholder="Bar Name" required />
+              <textarea rows="5" type="text" class="form-control" name="review" id="review" value="{{ review.review }}" placeholder="Review" required ></textarea>
+              <input type="picture" class="form-control" name="picture" id="picture" value="{{ review.picture }}" placeholder="Picture" />
+              <input type="text" class="form-control" name="fav_drink" id="fav_drink" value="{{ review.fav_drink }}" placeholder="Fav Drink" required />
+                <input type="text" class="form-control" name="location" id="location" value="{{ review.location }}" placeholder="Location" required />
               <div class="row text-center">
                 <div class="col form-button">
-                  <button type="submit" class="btn btn-dark">Edit Review</button>
+                    <a href="{{ url_for('get_reviews') }}" type="submit" class="btn btn-dark">Cancel</a>
+                    <button type="submit" class="btn btn-dark">Edit Review</button>
                 </div>
               </div>
             </form>
