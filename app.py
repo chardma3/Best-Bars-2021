@@ -112,7 +112,7 @@ def write_review():
         }
         mongo.db.reviews.insert_one(review)
         flash("Review Successfully Added")
-        return redirect(url_for("write_review"))
+        return redirect(url_for("get_reviews"))
 
     bars = mongo.db.bars.find().sort("bar_name", 1)
     return render_template("write_review.html", bars=bars)
@@ -135,6 +135,13 @@ def edit_review(review_id):
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     bars = mongo.db.bars.find().sort("bar_name", 1)
     return render_template("edit_review.html", review=review, bars=bars)
+
+
+@app.route("/delete_review/<review_id>")
+def delete_review(review_id):
+    mongo.db.tasks.remove({"_id": ObjectId(review_id)})
+    flash("Review Successfully Deleted")
+    return redirect(url_for("get_reviews"))
 
 
 if __name__ == "__main__":
