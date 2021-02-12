@@ -12,40 +12,47 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Best Bars</title>
 </head>
+
 <body>
     <header>
-        <!-- heading --> 
-    <div class="heading-container container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1>BEST BARS 2021<span class="small">...as reviewed by you</span></h1> 
+        <!-- heading -->
+        <div class="heading-container container-fluid">
+            <div class="row">
+                <div class="col">
+                  <h1>BEST BARS 2021<span class="small">...as reviewed by you</span></h1>
+                </div>
             </div>
         </div>
-    </div>
         <!-- navbar-->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container"></div>
-                <div class="collapse navbar-collapse" id="navbarToggler">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul id="menu-main-nav" class="navbar-nav nav-fill w-100">
-                        <li id="menu-item-1" class="nav-item  menu-item-1"><a href="{{ url_for('get_reviews') }}" class="nav-link">HOME</a>
+                        <li id="menu-item-1" class="nav-item  menu-item-1"><a href="{{ url_for('get_reviews') }}"
+                                class="nav-link">HOME</a>
                         </li>
                         {% if session.user %}
-                            <li id="menu-item-4"
+                        <li id="menu-item-4"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
-                            href="{{ url_for('profile', username=session['user']) }}" class="nav-link">PROFILE</a></li>
-                            <li id="menu-item-5"
+                                href="{{ url_for('profile', username=session['user']) }}" class="nav-link">PROFILE</a>
+                        </li>
+                        <li id="menu-item-5"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
-                            href="{{ url_for('write_review') }}" class="nav-link">REVIEW</a></li>
-                              <li id="menu-item-6"
+                                href="{{ url_for('write_review') }}" class="nav-link">REVIEW</a></li>
+                        <li id="menu-item-6"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
-                            href="{{ url_for('logout', username=session['user']) }}" class="nav-link">LOG OUT</a></li>
+                                href="{{ url_for('logout', username=session['user']) }}" class="nav-link">LOG OUT</a>
+                        </li>
                         {% else %}
-                            <li id="menu-item-2"
+                        <li id="menu-item-2"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a
-                            href="{{ url_for('login') }}" class="nav-link">LOGIN</a></li>
-                            <li id="menu-item-3"
+                                href="{{ url_for('login') }}" class="nav-link">LOGIN</a></li>
+                        <li id="menu-item-3"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-3"><a
-                            href="{{ url_for('register') }}" class="nav-link">REGISTER</a></li>
+                                href="{{ url_for('register') }}" class="nav-link">REGISTER</a></li>
                         {% endif %}
                         <!--search button-->
                         <form class="d-flex">
@@ -61,13 +68,13 @@
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                <div class="row flashes text-center">
-                    <h4>{{ message }}</h4>
-                </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes text-center">
+            <h4>{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
     <main class="container-fluid">

@@ -1,5 +1,12 @@
 @import "https://fonts.googleapis.com/css2?family=Anton&display=swap:wght@700&family=Raleway:wght@400;900&display=swap";
 
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
@@ -30,6 +37,10 @@ h3, h4 {
 .navbar a {
     padding: 12px;
     font-family: 'Anton', sans-serif;
+}
+
+.heading a {
+text-decoration: none;
 }
 
 a:hover {
