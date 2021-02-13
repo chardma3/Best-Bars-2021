@@ -19,9 +19,8 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/best_bars")
 # Render home page
-def home():
+def index():
     return render_template('index.html')
 
 
