@@ -19,6 +19,12 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/best_bars")
+# Render home page
+def home():
+    return render_template('index.html')
+
+
 @app.route("/get_reviews")
 def get_reviews():
     reviews = mongo.db.reviews.find()
@@ -80,7 +86,7 @@ def login():
 
         else:
             # username doesn't exist
-            flash("Incorrect User details")
+            flash("Incorrect User Details")
             return redirect(url_for("login"))
 
     return render_template("login.html")
