@@ -22,9 +22,7 @@ h1 {
     font-size: 60px;
 }
 
-a {
-    color: black;
-}
+
 
 h3, h4 {
     font-family: 'Anton', sans-serif;
@@ -87,6 +85,13 @@ a:hover {
     padding-bottom:15px;
 }
 
+.bg-hero {
+    height: 80vh;
+    background: url('../images/hero_drinks.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display:flex;
+}
+
 /* Buttons */
 
 .btn {
@@ -97,6 +102,39 @@ a:hover {
 .btn:hover {
     background-color: purple;
     box-shadow: none;
+}
+
+/* Footer */
+
+.footer-container {
+    margin-top: 30px;
+    background-color:lightgray;
+}
+
+.copyright-container {
+    text-align: center; 
+}
+
+
+.social-links li a i {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 16px 0;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 9px;
+    text-align: center;
+    color:white;
+    background: #000000;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: purple;
 }
 
 /* Media queries */
