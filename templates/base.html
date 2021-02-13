@@ -36,10 +36,6 @@
                                 class="nav-link">HOME</a>
                         </li>
                         {% if session.user %}
-                        <li id="menu-item-4"
-                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
-                                href="{{ url_for('profile', username=session['user']) }}" class="nav-link">PROFILE</a>
-                        </li>
                         <li id="menu-item-5"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
                                 href="{{ url_for('write_review') }}" class="nav-link">REVIEW</a></li>
@@ -48,6 +44,9 @@
                                 href="{{ url_for('logout', username=session['user']) }}" class="nav-link">LOG OUT</a>
                         </li>
                         {% else %}
+                        <li id="menu-item-7"
+                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
+                                href="{{ url_for('reviews') }}" class="nav-link">REVIEW</a></li>
                         <li id="menu-item-2"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a
                                 href="{{ url_for('login') }}" class="nav-link">LOGIN</a></li>
@@ -82,6 +81,48 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    <footer>
+        <section class="container-fluid footer-container">
+            <div class="row">
+                <div class="social-container mx-auto">
+                    <ul class="list-inline social-links">
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.tripadvisor.com/">
+                                <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+                                <span class="sr-only">Trip Advisor</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://whiteguide.com/">
+                                <i class="fa fa-certificate" aria-hidden="true"></i>
+                                <span class="sr-only">White Guide</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="copyright-container mx-auto">
+                        <p>Best Bars 2021</p>
+                    </div>
+                </div>
+            </div>
+      </section>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

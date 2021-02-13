@@ -2,9 +2,13 @@
 
 
 * {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
 }
 
 body {
@@ -53,7 +57,7 @@ a:hover {
 
 .flashes h4 {
     line-height: 20px;
-    margin-top: 50px;
+    margin-top  : 50px;
     color: purple;
     font-family: 'Anton', sans-serif; 
 }
