@@ -4,24 +4,29 @@
 
 <div class="container-fluid">
     <div class="row">
-                         
-    {% for reviews in reviews %}
+
+        {% for reviews in reviews %}
         <div class="col-12 col-md-6 mt-5 card-reviews text-center">
             <div class="card-body">
-                <h5 class="card-title" >{{ reviews.bar_name }}<br></h5>
-                <p class="card-text">{{ reviews.review }}</p>
-                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ reviews.fav_drink }}</li>
-                        <li class="list-group-item">{{ reviews.location }}</li>
-                        <li class="list-group-item">{{ reviews.created_by }}</li>
-                    </ul>
-                    {% if session.user|lower == reviews.created_by|lower %}
-                        <a href="{{ url_for('edit_review', review_id=reviews._id) }}" class="btn btn-dark">Edit</a>
-                        <a href="{{ url_for('delete_review', review_id=reviews._id) }}" class="btn btn-dark">Delete</a>
-                    {% endif %}
+                <dl class="list-group list-group-flush">
+                    <dt>BAR NAME</dt>
+                    <dd class="list-group-item">{{ reviews.bar_name }}</dd>
+                    <dt>REVIEW</dt>
+                    <dd class="list-group-item">{{ reviews.review }}</dd>
+                    <dt>FAV DRINK</dt>
+                    <dd class="list-group-item">{{ reviews.fav_drink }}</dd>
+                    <dt>LOCATION</dt>
+                    <dd class="list-group-item">{{ reviews.location }}</dd>
+                    <dt>REVIEWED BY</dt>
+                    <dd class="list-group-item">{{ reviews.created_by }}</dd>
+                </dl>
+                {% if session.user|lower == reviews.created_by|lower %}
+                <a href="{{ url_for('edit_review', review_id=reviews._id) }}" class="btn btn-dark">Edit</a>
+                <a href="{{ url_for('delete_review', review_id=reviews._id) }}" class="btn btn-dark">Delete</a>
+                {% endif %}
             </div>
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 </div>
 
