@@ -7,27 +7,24 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
 }
 
-h1 {
+.header-h1 {
     font-family: 'Anton', sans-serif; 
     padding: 12px;
     font-size: 60px;
 }
 
-h3, h4 {
+h1, h3, h4 {
     font-family: 'Anton', sans-serif;
 }
 
-.small {
-    font-size: 20px;
+.navbar {
+    background-color: #F5B700;
 }
-
 .navbar a {
     padding: 12px;
     font-family: 'Anton', sans-serif;
@@ -39,8 +36,8 @@ color: black;
 }
 
 a:hover {
-    color:purple;
-    text-decoration: solid underline purple 4px;
+    color:#DC0073;
+    text-decoration: solid underline #DC0073 4px;
     transition: color .15s ease-in-out,
     -background-color .15s ease-in-out,
     -border-color .15s ease-in-out;
@@ -49,13 +46,13 @@ a:hover {
 .flashes h4 {
     line-height: 20px;
     margin-top  : 50px;
-    color: purple;
+    color: #DC0073;
     font-family: 'Anton', sans-serif; 
 }
 
 .card-reviews {
     padding: 20px;
-    border: solid 1px purple;
+    border: solid 1px #DC0073;
 }
 
 img {
@@ -120,7 +117,7 @@ padding-top: 55px;
 }
 
 .btn:hover {
-    background-color: purple;
+    background-color: #DC0073;
     box-shadow: none;
 }
 
@@ -128,7 +125,7 @@ padding-top: 55px;
 
 .footer-container {
     margin-top: 30px;
-    background-color:lightgray;
+    background-color:#F5B700;
 }
 
 .copyright-container {
@@ -154,7 +151,7 @@ padding-top: 55px;
 }
 
 .social-links li a i:hover {
-    background: purple;
+    background: #DC0073;
 }
 
 /* Media queries */
