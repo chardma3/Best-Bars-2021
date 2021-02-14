@@ -74,6 +74,10 @@ width: 100%
     color:black;
 }
 
+.text-bottom {
+padding-top: 55px;
+}
+
 /* Form */
 
 .form {
