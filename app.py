@@ -50,13 +50,14 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
+            "email": request.form.get("email").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
 
-        # put the  new user into session cookie
+        # put the new user into session cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful")
+        flash("Registration Successful!")
         return redirect(url_for("get_reviews", username=session["user"]))
 
     return render_template("register.html")
