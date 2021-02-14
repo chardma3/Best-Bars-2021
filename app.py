@@ -131,6 +131,7 @@ def edit_review(review_id):
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Updated")
+        return redirect(url_for("get_reviews"))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     bars = mongo.db.bars.find().sort("bar_name", 1)
