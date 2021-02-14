@@ -27,18 +27,15 @@ h3, h4 {
 .small {
     font-size: 20px;
 }
-/*
-.navbar {
-    display: flex;
-}
-*/
+
 .navbar a {
     padding: 12px;
     font-family: 'Anton', sans-serif;
 }
 
-.heading a {
+.heading-link:hover {
 text-decoration: none;
+color: black;
 }
 
 a:hover {
@@ -56,11 +53,6 @@ a:hover {
     font-family: 'Anton', sans-serif; 
 }
 
-.profile-group {
-    margin: 0 auto;
-    max-width: 70%; 
-}
-
 .card-reviews {
     padding: 20px;
     border: solid 1px purple;
@@ -74,6 +66,9 @@ width: 100%
     color:black;
 }
 
+.heading-link {
+    color:black;
+}
 .text-bottom {
 padding-top: 55px;
 }
