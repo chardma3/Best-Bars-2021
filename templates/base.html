@@ -17,7 +17,7 @@
 <body>
     <header>
         <!-- heading -->
-        <div class="heading-container container-fluid">
+        <div class="container heading-container container-fluid mx-0">
             <div class="row">
                 <div class="col">
                   <h1>BEST BARS 2021<span class="small">...as reviewed by you</span></h1>
@@ -35,6 +35,9 @@
                         <li id="menu-item-1" class="nav-item  menu-item-1"><a href="{{ url_for('index') }}"
                                 class="nav-link">HOME</a>
                         </li>
+                        <li id="menu-item-7"
+                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
+                                href="{{ url_for('get_reviews') }}" class="nav-link">REVIEWS</a></li>
                         {% if session.user %}
                         <li id="menu-item-5"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
@@ -43,10 +46,9 @@
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
                                 href="{{ url_for('logout', username=session['user']) }}" class="nav-link">LOG OUT</a>
                         </li>
+                        
                         {% else %}
-                        <li id="menu-item-7"
-                            class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4"><a
-                                href="{{ url_for('get_reviews') }}" class="nav-link">REVIEWS</a></li>
+                        
                         <li id="menu-item-2"
                             class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a
                                 href="{{ url_for('login') }}" class="nav-link">LOGIN</a></li>
