@@ -22,8 +22,6 @@ h1 {
     font-size: 60px;
 }
 
-
-
 h3, h4 {
     font-family: 'Anton', sans-serif;
 }
@@ -85,9 +83,24 @@ a:hover {
     padding-bottom:15px;
 }
 
+/* Background Images */
 .bg-hero {
     height: 80vh;
-    background: url('../images/hero_drinks.jpg') no-repeat center center fixed;
+    background: url('../images/bg_hero.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display:flex;
+}
+
+.bg-second {
+    height: 80vh;
+    background: url('../images/bg_second.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display:flex;
+}
+
+.bg-third {
+    height: 80vh;
+    background: url('../images/bg_third.jpg') no-repeat center center fixed;
     background-size: cover;
     display:flex;
 }
