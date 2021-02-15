@@ -29,6 +29,14 @@ ul {
     border: solid 1px #DC0073;
 }
 
+.main {
+    background-color: #DC0073;
+}
+
+.yellow-quotation {
+    background-color: #F5B700;
+}
+
 /* ---------- Fonts ---------- */
 h1, h3, h4 {
     font-family: 'Anton', sans-serif;
@@ -61,7 +69,7 @@ text-decoration: none;
 color: black;
 }
 
-a:hover {
+.navbar a:hover {
     color:#DC0073;
     text-decoration: solid underline #DC0073 4px;
   transition: all 0.15s ease-in-out;
