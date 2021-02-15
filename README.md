@@ -20,41 +20,83 @@ The application is aimed at:
 
 Users of the application are able to create an account and submit reviews of bars that they think deserve attention. They are also able to edita nd delete their reviews as they see fit.
 
--   ### User stories
-1. As a user I want the ability to understand how to play the game.
-2. As a user I want audio and visual feedback. As well as positive feedback when I have succeeded.
-3. As a user I want a unique, enjoyable and challenging experience.
+### User Stories
+
+#### First Time Visitor Goals
+
+- As a **first time visitor**, I want to understand the main purpose of the site
+- As a **first time visitor**, I want to be able to easily navigate through the site
+- As a **first time visitor**, I want to be able to find bars in my current area
+- As a **first time visitor**, I want to be able to sign up for an account to add my own reviews
+- As a **first time visitor**, I want to be able to contact the site owner
+
+#### Registered User Goals
+
+- As a **registered user**, I want to be able to easily login and logout of my account
+- As a **registered user**, I want to be able to add reviews to the site
+- As a **registered user**, I want to be able to edit any reviews that I have written
+- As a **registered user**, I want to be able to delete any reviews that I have written
+
+#### Site Owner Goals
+
+- As a **site owner**, I want to provide the user with a description about the purpose of the site
+- As a **site owner**, I want to include a navigation bar to allow users to easily and intuitively navigate to other pages on the site
+- As a **site owner**, I want to provide the user with access to reviews without having to create an account
+- As a **site owner**, I want to allow the user to easily sign up for an account to allow them to write their own reviews
+- As a **site owner**, I want to allow the user to easily edit and delete any reviews thay've added to the site
+- As a **site owner**, I want all visitors and registered users to be able to easily contact me through email or social media platforms
 
       
 -   ### Design
     -   #### Colour Scheme
-        -   The main colors are blue and white which is typically associated with boating and the changing colours in the background are to mimic the the sunset and color of the ocean.
+        -   The main colors are black and white with bold and exciting colors of yellow/orange and purple/pink. I found these just from experimenting. I'm a fan of bold and exciting.
     -   #### Typography
-        -   The font I used for the header is Pacifico Cursive from Google Fonts as I felt it fit in with the free and easy beach feeling associated with summer. For the other text I used Trebuchet with a back up of Helvetica.
+        -   The font I used for the header is Anton from Google Fonts as I felt it was a minimal, yet strong and stiking font that feels very magazine-ish. For the other text I used Raleway from Google fonts with a back up of Sans Serif.
     -   #### Imagery
-        -   The images are elegant yet simple illustrations of things usually associated with summer and specifically beach life.
+        -   The images featured on the site are cocktails with exciting garnishing, elegant glasswear are well styled and lit, with vibrant colors and elegant content. Credits can be found below
         
 *   ### Wireframe
-    -Wireframes were done in photoshop. The size of the cards aren't exactly the same showing that it wasn't a screenshot. I got the idea of doing wireframes in photoshop from the the example project for Milestone 1 
-    which my mentor showed me. The link to which is here [View](https://github.com/D1ang/EL1TE)  
+    -Wireframes were done in photoshop. As I focus very much on images, fonts and colors I find that photoshop is more useful for me when wireframing. The wireframes evolved and served as a testing ground for new layouts and features. 
+    The main template layout consists of a header, navbar and the footer, and is used across the site.
     The link to the pdf file with wireframes for desktop, tablet and mobile devices can be viewed here - [View](https://github.com/chardma3/SummerMemories/tree/master/assets/wireframes)
+
+## Database Schema
+
+MongoDB Atlas was the cloud database service used to create and store the database collections for this project:
+
+### Dictionary Collection
+
+| Key | Value |
+| :---: | :---: |
+| _id: | ObjectId("unique_id") |
+| bar-name: | "string" |
+| review: | "string" |
+| fav_drink: | "string" |
+| location: | "string" |
+| added_by: | "string" |
+
+### User Profile Collection
+
+| Key | Value |
+| :---: | :---: |
+| _id: | ObjectId("unique_id") |
+| username: | "string" |
+| email: | "string" |
+| password: | "string" |
 
 ## Features
 
 -   Responsive on different device sizes
--   Interactive buttons
--   Game info section
--   Audio and visual feedback
-
-**Buttons**  
-*The buttons allow the user to learn how to play the game, restart the game and toggle the sound on and off.
-
-**Game Info**  
-*The game info section shows the user information reagrding the game. I.e. how many seconds thay have left and how many times they have flipped a card.
+-   an easy to use navigation bar located at the top of the page, available on all pages and collapses to an icon on mobile devices
+-   A home page with a desciption that explains the purpose of the site
+-   A reviews page
+-   Add, Edit and Delete review functionality
+-   Login, Log Out and register functionality
+-   A footer located on every page with links to social media accounts and an email link
 
 **Features Left to Implement**  
-*In the future I would like to implement a sound button so that the user can toggle the sound on and off. I would also like to implement a high score tally so that the user can attempt to better their score which would make the user more likely to return to the game.
-*I have decided not to implement an introduction before the game commences as there is an instructions button as well as a restart button so that if the user wishes to see the instructions they can and then restart the game. I felt it would be redundant and a bad user experience.
+*In the future I would like to implement a recipe form for users to add recipes of cocktails
+
 
 ## Technologies Used
 
@@ -63,10 +105,11 @@ Users of the application are able to create an account and submit reviews of bar
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://www.python.org/)
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.5:](https://getbootstrap.com/)
+1. [Bootstrap 5.0:](https://getbootstrap.com/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used to import the heading font of Pacifico cursive and Trebuchet.
@@ -78,6 +121,39 @@ Users of the application are able to create an account and submit reviews of bar
     - GitHub is used to store the projects code after being pushed from Git.
 1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
     - Photoshop was used for manipulating images, creating favicon and creating the wireframes during the design process.
+1. [Heroku](https://www.heroku.com/)
+   - Heroku is a cloud platform that was used to deploy and run the application from the GitHub repository
+1. [EmailJS](https://www.emailjs.com/)
+    - EmailJS was used to add an email service to the form in the contact template
+1. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+   - Flask was the microframework use to build the application
+1. [Font Awesome](https://fontawesome.com/)
+   - Font Awesome was used to add various icons throughout the site
+1. [MongoDB](https://www.mongodb.com/)
+   - MongoDB Atlas is a cloud database service used to create and store the database collections for the application
+1. [VS Code](https://code.visualstudio.com/)
+   - Visual Studio Code was the IDE used to code the project
+
+   ### Dependencies
+
+1. [autopep8](https://pypi.org/project/autopep8/)
+   - A tool that automatically formats Python code to conform to the PEP 8 style guide
+1. [click](https://palletsprojects.com/p/click/)
+   - Composable command line interface toolkit
+1. [dnspython](https://www.dnspython.org/)
+   - A DNS toolkit for Python
+1. [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
+   - PyMongo support for Flask applications
+1. [itsdangerous](https://palletsprojects.com/p/itsdangerous/)
+   - Various helpers to pass data to untrusted environments and back
+1. [Jinja2](https://palletsprojects.com/p/jinja/)
+   - Templating language for Python
+1. [MarkupSafe](https://palletsprojects.com/p/markupsafe/)
+   - Safely add untrusted strings to HTML/XML markup
+1. [pymongo](https://pypi.org/project/pymongo/)
+   - Python driver for MongoDB
+1. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+   - A comprehensive WSGI web applications library
 
 ## Testing
 
@@ -89,9 +165,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [JSHint](https://jshint.com/) - To test website for JS errors
 
 ### Bugs Found
--   The alt tags were not filled in. I ran the validator and then forgot to do it. Alt tags for screen readers are now available.
--   Hyphens in HTML comments have been fixed. My mentor said that I should extend the size of my comments to make them easier to read. However this was wrong. This has been rectified.
--   JS scripts were loaded outside the head and body - they were just before the closing 'html' tag; they should have been just before the closing 'body' tag. Initially the JS script was in the header tag but my mentor said that they should be after the closing body tag. This has been rectified and are now in the header tag.
+-   ...
+
     
 ### Automated testing
 -   Automated testing has been done and it conforms to screen readers and is error free
@@ -138,14 +213,12 @@ In order to run the code for the project locally use the link provided to naviga
 
 ### Media
 
-Images used in the game have been sourced from Freepik which are available for personal use.
+Images used on the site have been sourced from liquor.com and delicious.com
 
 ### Content
 
--   Concept, design and coding has been created by myself
+-   Concept, design, coding and text has been created by myself. Wikipedia has also been used for extra research 
 
 ### Acknowledgements
 
-- I received found inspiration and coding ideas from a number of youtube tutorials. And built this (mostly) in pure javascript without the use of a library. These were: JavaScript Snake Game Tutorial Using Functional Programming found at https://www.youtube.com/watch?v=bRlvGoWz6Ig&t=3141s, Memory Game in JavaScript found at https://www.youtube.com/watch?v=tjyDOHzKN0w and Memory Card Game found at https://www.youtube.com/watch?v=ZniVgo8U7ek. I also used the Fisher Yates  shuffle code snippet found on Wikipedia. Address:https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-
--  Thanks to my mentor for advising me and helping me make the project better
+-  Thanks to my mentor for advising me and helping me make the project better as well as the CI tutors who have helped me with many a problem
