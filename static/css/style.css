@@ -1,6 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Anton&display=swap:wght@700&family=Raleway:wght@400;900&display=swap";
 
-
 * {
     padding: 0;
     margin: 0;
@@ -12,14 +11,41 @@ body {
     scroll-behavior: smooth;
 }
 
+img {
+width: 100%;
+}
+
+ul {
+    display: table;
+    margin: 0 auto;
+}
+
+.link-text {
+    color:black;
+}
+
+.card-reviews {
+    padding: 20px;
+    border: solid 1px #DC0073;
+}
+
+/* ---------- Fonts ---------- */
+h1, h3, h4 {
+    font-family: 'Anton', sans-serif;
+}
+
+.flashes h4 {
+    line-height: 20px;
+    margin-top  : 50px;
+    color: #DC0073;
+    font-family: 'Anton', sans-serif; 
+}
+
+/* ---------- Navigation Bar ---------- */
 .header-h1 {
     font-family: 'Anton', sans-serif; 
     padding: 12px;
     font-size: 60px;
-}
-
-h1, h3, h4 {
-    font-family: 'Anton', sans-serif;
 }
 
 .navbar {
@@ -38,49 +64,39 @@ color: black;
 a:hover {
     color:#DC0073;
     text-decoration: solid underline #DC0073 4px;
-    transition: color .15s ease-in-out,
-    -background-color .15s ease-in-out,
-    -border-color .15s ease-in-out;
-}
-
-.flashes h4 {
-    line-height: 20px;
-    margin-top  : 50px;
-    color: #DC0073;
-    font-family: 'Anton', sans-serif; 
-}
-
-.card-reviews {
-    padding: 20px;
-    border: solid 1px #DC0073;
-}
-
-img {
-width: 100%;
-}
-
-.link-text {
-    color:black;
+  transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
 }
 
 .heading-link {
     color:black;
 }
 
-ul {
-    display: table;
-    margin: 0 auto;
+/* ---------- Delete Modal ---------- */
+
+li.modal.open {
+    margin: auto;
 }
 
-.large-quotation {
-     
-  
-    
+.modal {
+    border-radius: 20px;
+    font-weight: 700;
+    height: auto;
+    padding: 20px;
 }
 
+.modal h4 {
+    font-size: 1.8rem;
+    margin: 0;
+}
 
-/* Form */
+.modal .modal-footer {
+    text-align: center;
+}
 
+/* ---------- Form ---------- */
 .form {
     margin-top: 15px;
     height: 100vh;
@@ -96,8 +112,7 @@ ul {
     padding-bottom:15px;
 }
 
-/* Buttons */
-
+/* ---------- Buttons ---------- */
 .btn {
     border:none;
     font-family: 'Anton', sans-serif;  
@@ -108,8 +123,7 @@ ul {
     box-shadow: none;
 }
 
-/* Footer */
-
+/* ---------- Footer ---------- */
 .footer-container {
     margin-top: 30px;
     background-color:#F5B700;
@@ -118,7 +132,6 @@ ul {
 .copyright-container {
     text-align: center; 
 }
-
 
 .social-links li a i {
     margin-top: 20px;
@@ -131,18 +144,17 @@ ul {
     text-align: center;
     color:white;
     background: #000000;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
 }
 
 .social-links li a i:hover {
     background: #DC0073;
 }
 
-/* Media queries */
-
+/* ---------- Media Queries ---------- */
 @media(min-width: 992px) {
     .form-group {
         padding-top:30px;

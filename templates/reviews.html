@@ -27,6 +27,34 @@
                 {% endif %}
             </div>
         </div>
+        <!-- Delete Confirmation Modal -->
+        <li id="{{ reviews._id }}" class="modal">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <h4>
+                    Are you sure you want to delete<br>
+                    "{{ reviews.review }}"<br>
+                    Review?
+                </h4>
+            </div>
+
+            <!-- Buttons -->
+            <div class="row modal-footer text-center">
+                <!-- Cancel Button -->
+                <div class="col s12 m6">
+                    <a href="#!" class="btn delete modal-close z-depth-0">
+                        Cancel
+                    </a>
+                </div>
+
+                <!-- Delete Button -->
+                <div class="col s12 m6">
+                    <a href="{{ url_for('delete_review', review_id=reviews._id) }}" class="btn delete z-depth-0">
+                        Delete
+                    </a>
+                </div>
+            </div>
+        </li>
         {% endfor %}
     </div>
 </div>
