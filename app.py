@@ -25,12 +25,14 @@ def index():
 
 
 @app.route("/get_reviews")
+# Render reviews 
 def get_reviews():
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/search", methods=["GET", "POST"])
+# Search functionality
 def search():
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
@@ -38,6 +40,7 @@ def search():
 
 
 @app.route("/register", methods=["GET", "POST"])
+# Render register page
 def register():
     if request.method == "POST":
         # check if username already exists in db
@@ -64,6 +67,7 @@ def register():
 
 
 @app.route("/login", methods=["GET", "POST"])
+# Render login page
 def login():
     if request.method == "POST":
         # check if username exists in database
@@ -93,6 +97,7 @@ def login():
 
 
 @app.route("/logout")
+# Logout Functionality
 def logout():
     # remove user from session cookies
     flash("You've been logged out")
@@ -101,6 +106,7 @@ def logout():
 
 
 @app.route("/write_review", methods=["GET", "POST"])
+# Render write review page
 def write_review():
     if request.method == "POST":
         review = {
@@ -120,6 +126,7 @@ def write_review():
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+# Render edit review page
 def edit_review(review_id):
     if request.method == "POST":
         submit = {
@@ -140,6 +147,7 @@ def edit_review(review_id):
 
 
 @app.route("/delete_review/<review_id>")
+# Delete functionality
 def delete_review(review_id):
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
