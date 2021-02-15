@@ -6,7 +6,7 @@ Best Bars 2021 is a web application designed for those that love the nightlife! 
 music and vibes is all important and at Best Bars 2021 and we want users to contribute reviews detailing the impressive Bars that we should know about.
 The website is responsive and available on desktop, laptops, tablets and mobile devices.
 
-<h2 align="center"><img src="https://github.com/chardma3/SummerMemories/blob/master/assets/images/Mockup.jpg"></h2>
+
 
 
 ## User Experience (UX)
@@ -58,7 +58,7 @@ Users of the application are able to create an account and submit reviews of bar
 *   ### Wireframe
     -Wireframes were done in photoshop. As I focus very much on images, fonts and colors I find that photoshop is more useful for me when wireframing. The wireframes evolved and served as a testing ground for new layouts and features. 
     The main template layout consists of a header, navbar and the footer, and is used across the site.
-    The link to the pdf file with wireframes for desktop, tablet and mobile devices can be viewed here - [View](https://github.com/chardma3/SummerMemories/tree/master/assets/wireframes)
+   
 
 ## Database Schema
 
@@ -156,37 +156,6 @@ MongoDB Atlas was the cloud database service used to create and store the databa
 1. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
    - A comprehensive WSGI web applications library
 
-## Testing
-
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
--   [W3C Markup Validator](https://validator.w3.org/) - To test for errors in html
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - To test for errors in css
--   [GTmetrix](https://gtmetrix.com/) - To test website loading times
--   [JSHint](https://jshint.com/) - To test website for JS errors
-
-### Bugs Found
--   ...
-
-
-### Testing User Stories from User Experience (UX) Section
-
-The site was tested manually and fulfills its goals by providing an easy and straightforward way for users to achieve their goals.
-
-1 Buttons 
--  The buttons provided allow the user to tailor the game to suit their needs. These are: a sound button to toggle the sound on and off, an instructions button which acts as an accordian and shows the instructions for the game, and a restart button so that the user can retsart if they got off to a bad start and would like to start again rather than waiting for the timer to run out.
-
-2 Game Info Section 
--  The game info section provides the time ticking down from 80 seconds and a flips tally which shows how many times you have flipped a card.
-
-The website is responsive and diplays the four by four grid on desktop screen and tablet sized devices and displays two cards wide in mobile view.
-
-### Further Testing
-
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX via Google Chrome developer Tools.
--   All buttons, links and other functions were tested to ensure they work.
--   Friends and family were asked to look at the site and give feedback on their user experience with the site in regard to color, sizes, and font styles.
 
 ## Deployment
 
@@ -241,4 +210,3 @@ Images used on the site have been sourced from liquor.com and delicious.com
 - I followed theh following for guidance on the delete modal:
  [W3Schools](https://www.w3schools.com/howto/howto_css_delete_modal.asp)
 
--  Thanks to my mentor for advising me and helping me make the project better as well as the CI tutors who have helped me with many a problem.
