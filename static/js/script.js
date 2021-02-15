@@ -1,6 +1,6 @@
-$(document).ready(function () {
+// $(document).ready(function () {
 
-    // Delete confirmation modal
-$('.modal').modal();
+//     // Delete confirmation modal
+// $('.modal').modal();
 
-});
+// });

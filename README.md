@@ -95,7 +95,8 @@ MongoDB Atlas was the cloud database service used to create and store the databa
 -   A footer located on every page with links to social media accounts and an email link
 
 **Features Left to Implement**  
-*In the future I would like to implement a recipe form for users to add recipes of cocktails
+* In the future I would like to implement a recipe form for users to add recipes of cocktails
+* An admin page could be advantageous so that one can administate via the application rather than go into Mongo DB
 
 
 ## Technologies Used
@@ -167,9 +168,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ### Bugs Found
 -   ...
 
-    
-### Automated testing
--   Automated testing has been done and it conforms to screen readers and is error free
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -187,7 +185,7 @@ The website is responsive and diplays the four by four grid on desktop screen an
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX via Google Chrome developer Tools.
--   All buttons, cards and other functions were tested to ensure they work.
+-   All buttons, links and other functions were tested to ensure they work.
 -   Friends and family were asked to look at the site and give feedback on their user experience with the site in regard to color, sizes, and font styles.
 
 ## Deployment
@@ -213,31 +211,17 @@ This project is hosted on Heroku - A cloud platform service that enables develop
 - Once connected, **"Enable Automatic Deployments"** and select the **"Master"** or **"Main"** branch to deploy
 - Click the **"Deploy Branch"** button to deploy the app to Heroku
 
-### GitHub Pages
-
-The site was coded on Github and can be found here 
-
-This project has been coded on Github by doing the following:
-1. Login to GitHub and locate the required [GitHub Repository](https://github.com/chardma3/SummerMemories)
-2. At the top of the Repository locate the "Settings" Button on the menu.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://chardma3.github.io/SummerMemories/) in the "GitHub Pages" section.
-
 There are no differences between the deployed version and the developement version.
-
-In order to run the code for the project locally use the link provided to navigate to the project repository and the clone the project. 
 
 ### Cloning the Repository
 
-To clone the repository and make a local copy on your computer, follow these steps:
+To clone the repository on GitHub and make a local copy on your computer, follow these steps:
 
-- Open GitHub and locate the GitHub repository: [https://github.com/KirstChat/how-till-spake-norn-irish](https://github.com/KirstChat/how-till-spake-norn-irish)
+- Open GitHub and locate the GitHub repository: [https://chardma3.github.io/Best-Bars-2021](https://chardma3.github.io/Best-Bars-2021)
 - Under the repository name, click "Code" and copy the link to clone the repository using "HTTPS"
 - After copying the link, open terminal on your computer - this step can also be done in the terminal in your preferred IDE
 - Change the current working directory to the location where you want the cloned directory to be saved
-- Type ```git clone```, and then paste the URL: [https://github.com/KirstChat/how-till-spake-norn-irish.git](https://github.com/KirstChat/how-till-spake-norn-irish.git)
+- Type ```git clone```, and then paste the URL: [https://github.com/chardma3/Best-Bars-2021.git](https://github.com/chardma3/Best-Bars-2021.git)
 - Press Enter to create a local clone
 - To then run the repository locally, install the required dependencies from the **requirements.txt** file: ```pip3 install requirements.txt```
 - Run the app from your local IDE using the following command: ```python3 app.py```
@@ -254,5 +238,7 @@ Images used on the site have been sourced from liquor.com and delicious.com
 -   Concept, design, coding and text has been created by myself. Wikipedia has also been used for extra research 
 
 ### Acknowledgements
+- I followed theh following for guidance on the delete modal:
+ [W3Schools](https://www.w3schools.com/howto/howto_css_delete_modal.asp)
 
--  Thanks to my mentor for advising me and helping me make the project better as well as the CI tutors who have helped me with many a problem
+-  Thanks to my mentor for advising me and helping me make the project better as well as the CI tutors who have helped me with many a problem.
