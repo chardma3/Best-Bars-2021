@@ -192,11 +192,32 @@ The website is responsive and diplays the four by four grid on desktop screen an
 
 ## Deployment
 
+### Heroku
+
+This project is hosted on Heroku - A cloud platform service that enables developers to build, run and operate applications entirely in the cloud:
+
+- Before creating a Heroku app, open the repository in Github and create a requirements file that lists all the applications and dependencies required to run the application: ```pip3 freeze --local > requirements.txt```
+- Create a Heroku specific file called a Procfile - this is what Heroku looks for to know which file runs the app and how to run it: ```echo web: python run.py > Procfile```
+- Open [Heroku](www.heroku.com) and login to your account or sign up for an account if you don't already have one
+- Open the dashboard and select **"New"** to create a new app
+- Name the app and set the region to Europe
+- Open the settings tab and open **"Reveal Config Vars"**
+- Add the environment variables from the **env.py** file:
+  - **KEY:** IP | **VALUE:** 0.0.0.0
+  - **KEY:** PORT | **VALUE:** 5000
+  - **KEY:** SECRET_KEY | **VALUE:** YOUR_SECRET_KEY
+  - **KEY:** MONGO_URI | **VALUE:** YOUR_MONGO_URI
+  - **KEY:** MONGO_DBNAME | **VALUE:** YOUR_MONGO_DBNAME
+- To deploy the app from GitHub, open the deploy tab and change the deployment method to GitHub
+- Connect to your GitHub account and search for the name of the repository to connect to
+- Once connected, **"Enable Automatic Deployments"** and select the **"Master"** or **"Main"** branch to deploy
+- Click the **"Deploy Branch"** button to deploy the app to Heroku
+
 ### GitHub Pages
 
-The site is hosted on Github pages.
+The site was coded on Github and can be found here 
 
-This project has been deployed to Github by doing the following:
+This project has been coded on Github by doing the following:
 1. Login to GitHub and locate the required [GitHub Repository](https://github.com/chardma3/SummerMemories)
 2. At the top of the Repository locate the "Settings" Button on the menu.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
@@ -207,6 +228,19 @@ This project has been deployed to Github by doing the following:
 There are no differences between the deployed version and the developement version.
 
 In order to run the code for the project locally use the link provided to navigate to the project repository and the clone the project. 
+
+### Cloning the Repository
+
+To clone the repository and make a local copy on your computer, follow these steps:
+
+- Open GitHub and locate the GitHub repository: [https://github.com/KirstChat/how-till-spake-norn-irish](https://github.com/KirstChat/how-till-spake-norn-irish)
+- Under the repository name, click "Code" and copy the link to clone the repository using "HTTPS"
+- After copying the link, open terminal on your computer - this step can also be done in the terminal in your preferred IDE
+- Change the current working directory to the location where you want the cloned directory to be saved
+- Type ```git clone```, and then paste the URL: [https://github.com/KirstChat/how-till-spake-norn-irish.git](https://github.com/KirstChat/how-till-spake-norn-irish.git)
+- Press Enter to create a local clone
+- To then run the repository locally, install the required dependencies from the **requirements.txt** file: ```pip3 install requirements.txt```
+- Run the app from your local IDE using the following command: ```python3 app.py```
 
 
 ## Credits
