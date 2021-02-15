@@ -45,7 +45,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Username Already Exists")
             return redirect(url_for("register"))
 
         register = {
@@ -112,7 +112,7 @@ def write_review():
             "created_by": session["user"]
         }
         mongo.db.reviews.insert_one(review)
-        flash("Review Successfully Added")
+        flash("Review Successfully Added!")
         return redirect(url_for("get_reviews"))
 
     bars = mongo.db.bars.find().sort("bar_name", 1)
@@ -131,7 +131,7 @@ def edit_review(review_id):
             "created_by": session["user"]
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
-        flash("Review Successfully Updated")
+        flash("Review Successfully Updated!")
         return redirect(url_for("get_reviews"))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})

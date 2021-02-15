@@ -8,10 +8,10 @@
         <div class="row">
           <div class="col">
             <form method="POST" action="{{ url_for('write_review') }}">
-              <input type="text" class="form-control" name="bar_name" id="name" placeholder="Bar Name" required />
-              <textarea rows="5" type="text" class="form-control" name="review" id="review" placeholder="Review" required ></textarea>
-              <input type="text" class="form-control" name="fav_drink" id="fav_drink" placeholder="Fav Drink" required />
-                <input type="text" class="form-control" name="location" id="location" placeholder="Location" required />
+              <input type="text" class="form-control" name="bar_name" id="name" placeholder="Bar Name" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9]{5,15}$" required />
+              <textarea rows="5" type="text" class="form-control" name="review" id="review" placeholder="Review" minlength="5" maxlength="300" pattern="^[a-zA-Z0-9]{5,15}$" required ></textarea>
+              <input type="text" class="form-control" name="fav_drink" id="fav_drink" placeholder="Fav Drink" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,15}$" required />
+                <input type="text" class="form-control" name="location" id="location" placeholder="Location" minlength="5" maxlength="40" pattern="^[a-zA-Z0-9]{5,15}$" required />
               <div class="row text-center">
                 <div class="col form-button">
                   <button type="submit" class="btn btn-dark">Submit!</button>
