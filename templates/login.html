@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-
 <h4 class="text-center mt-4">LOG IN</h4>
-
-<div class="form-container container-fluid">
+<div class="container-fluid">
     <div class="row form-group">
         <div class="col">
             <form method="POST" action="{{ url_for('login') }}">
@@ -29,5 +27,5 @@
         </p>
     </div>
 </div>
-
+</div>
 {% endblock %}

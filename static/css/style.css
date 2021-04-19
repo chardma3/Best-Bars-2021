@@ -8,7 +8,9 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    scroll-behavior: smooth;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -120,6 +122,10 @@ li.modal.open {
     padding-bottom:15px;
 }
 
+.form-container {
+    margin: auto 0;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
     border:none;
@@ -133,7 +139,7 @@ li.modal.open {
 
 /* ---------- Footer ---------- */
 .footer-container {
-    margin-top: 30px;
+    margin-top: auto;
     background-color:#F5B700;
 }
 
