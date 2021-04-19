@@ -126,6 +126,10 @@ li.modal.open {
     margin: auto 0;
 }
 
+.form-control {
+    height: 100%;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
     border:none;
