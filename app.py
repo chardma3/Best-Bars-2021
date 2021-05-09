@@ -150,7 +150,7 @@ def edit_review(review_id):
 # Delete functionality
 def delete_review(review_id):
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
-    flash("Review Successfully Deleted")
+    flash("Review Successfully Deleted!")
     return redirect(url_for("get_reviews"))
 
 
