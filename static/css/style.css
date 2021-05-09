@@ -13,10 +13,6 @@ body {
     flex-direction: column;
 }
 
-.row {
-    display: block;
-}
-
 img {
 width: 100%;
 }
@@ -62,7 +58,8 @@ h4 {
     line-height: 20px;
     margin-top  : 50px;
     color: #DC0073;
-    font-family: 'Anton', sans-serif; 
+    font-family: 'Anton', sans-serif;
+    display: block;
 }
 
 /* ---------- Navigation Bar ---------- */
