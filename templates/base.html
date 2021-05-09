@@ -63,14 +63,14 @@
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
-        <div class="row flashes mx-auto">
+        <div class="row flashes justify-content-center">
             <h4>{{ message }}</h4>
         </div>
         {% endfor %}
         {% endif %}
         {% endwith %}
     </section>
-    <main class="container-fluid form-container mb-2">
+    <main class="container-fluid form-container">
         {% block content %}
         {% endblock %}
     </main>
