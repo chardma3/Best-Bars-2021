@@ -6,8 +6,9 @@ Best Bars 2021 is a web application designed for those that love the nightlife! 
 music and vibes is all important and at Best Bars 2021 and we want users to contribute reviews detailing the impressive Bars that we should know about.
 The website is responsive and available on desktop, laptops, tablets and mobile devices.
 
+![Multi Device Website Mockup Generator](static/images/mockup.png)
 
-
+The image above is a screenshot of the site displayed on different devices using [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/).
 
 ## User Experience (UX)
 This web application is designed for those who wish to learn about bars in their current area as well as share reviews 
@@ -15,8 +16,8 @@ themselves about their experiences at bars they have visited
 
 The application is aimed at:
 
--people who like visting bars for an experience
--people who work in the industry
+- people who like visting bars for an experience
+- people who work in the industry
 
 Users of the application are able to create an account and submit reviews of bars that they think deserve attention. They are also able to edita nd delete their reviews as they see fit.
 
@@ -124,16 +125,12 @@ MongoDB Atlas was the cloud database service used to create and store the databa
     - Photoshop was used for manipulating images, creating favicon and creating the wireframes during the design process.
 1. [Heroku](https://www.heroku.com/)
    - Heroku is a cloud platform that was used to deploy and run the application from the GitHub repository
-1. [EmailJS](https://www.emailjs.com/)
-    - EmailJS was used to add an email service to the form in the contact template
 1. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
    - Flask was the microframework use to build the application
 1. [Font Awesome](https://fontawesome.com/)
    - Font Awesome was used to add various icons throughout the site
 1. [MongoDB](https://www.mongodb.com/)
    - MongoDB Atlas is a cloud database service used to create and store the database collections for the application
-1. [VS Code](https://code.visualstudio.com/)
-   - Visual Studio Code was the IDE used to code the project
 
    ### Dependencies
 
@@ -182,6 +179,17 @@ This project is hosted on Heroku - A cloud platform service that enables develop
 
 There are no differences between the deployed version and the developement version.
 
+## Local Deployment
+
+1. Navigate to the GitHub Repository.
+2. Click the Code drop down menu.
+3. Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.
+4. Open your developement editor of choice and open a terminal window in a directory of your choice.
+5. Use the git clone command in terminal followed by the copied git URL.
+6. A clone of the project will be created locally on your machine.
+
+Once the project has been loaded into an IDE of choice, run the following command in the shell to install all the required packages: pip install -r requirements.txt
+
 ### Cloning the Repository
 
 To clone the repository on GitHub and make a local copy on your computer, follow these steps:
@@ -195,6 +203,25 @@ To clone the repository on GitHub and make a local copy on your computer, follow
 - To then run the repository locally, install the required dependencies from the **requirements.txt** file: ```pip3 install requirements.txt```
 - Run the app from your local IDE using the following command: ```python3 app.py```
 
+# Testing
+All buttons have been manually tested and function. All templates showed errors when run through the html validator.
+The css validator returned an error stating that 4px is not a valid text decoration value. I checked on MDN WebDocs and it validated my use.
+It also showed warnings for unknown vendors. These we can ignore.
+
+### Validating code
+
+* HTML
+code is validated through [W3 validator](https://validator.w3.org/).
+
+* CSS
+code is validated through [W3 Jigsaw](https://jigsaw.w3.org/css-validator/).
+
+* JavaScript
+code is validated through [JS Hint](https://jshint.com/).
+
+* Python
+code is validated through [PEP8](http://pep8online.com/).
+
 
 ## Credits
 
@@ -206,7 +233,10 @@ Images used on the site have been sourced from liquor.com and delicious.com
 
 -   Concept, design, coding and text has been created by myself. Wikipedia has also been used for extra research 
 
-### Acknowledgements
-- I followed theh following for guidance on the delete modal:
- [W3Schools](https://www.w3schools.com/howto/howto_css_delete_modal.asp)
+## Coding Sources
 
+* Videos from Code Institute
+
+## Acknowledgments
+
+* Huge thanks to the gang at Code Institute Tutor Support and student Care for all their guidance, patience and support.
