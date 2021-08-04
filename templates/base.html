@@ -58,7 +58,7 @@
             </div>
         </nav>
     </header>
-    <section>
+    <div>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -69,14 +69,14 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
-    </section>
+    </div>
     <main class="container-fluid form-container">
         {% block content %}
         {% endblock %}
     </main>
     <!-- Footer -->
     <footer>
-        <section class="container-fluid footer-container mt-3">
+        <div class="container-fluid footer-container mt-3">
             <div class="row">
                 <div class="social-container mx-auto">
                     <ul class="list-inline social-links">
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </footer>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
