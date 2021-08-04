@@ -161,15 +161,15 @@ def page_not_found(e):
     return render_template("404.html"), 404
 
 
-@app.errorhandler(500) 
+@app.errorhandler(500)
 # 500 error handle
-def page_not_found(e): 
+def page_not_found(e):
     return render_template('500.html'), 500
 
 
 @app.errorhandler(403)
-# 403 error handler 
-def page_not_found(e): 
+# 403 error handler
+def page_not_found(e):
     return render_template('403.html'), 403
 
 
