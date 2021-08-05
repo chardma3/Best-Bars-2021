@@ -1,25 +1,58 @@
 <h1>Best Bars 2021</h1>
 
-[The live project can be viewed here.](https://best-bars.herokuapp.com/)
+<span id="Bestbars"></span>
+
+![Multi Device Website Mockup Generator](readme_img/mockup.png)
 
 Best Bars 2021 is a web application designed for those that love the nightlife! Bars, cocktails, service, decor, 
 music and vibes is all important and at Best Bars 2021 and we want users to contribute reviews detailing the impressive Bars that we should know about.
-The website is responsive and available on desktop, laptops, tablets and mobile devices.
 
-![Multi Device Website Mockup Generator](static/images/mockup.png)
+Everyone is welcome to create an account and add their reviews. If the user has an account, they can add, edit and delete their reviews.
+
+The website is responsive and available on desktop, laptops, tablets and mobile devices.
 
 The image above is a screenshot of the site displayed on different devices using [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/).
 
+**[The live project can be viewed here.](https://best-bars.herokuapp.com/)**
+
+---
+
+## Index 
+
+- <a href="#ux">1. User experience (UX)</a>
+  - <a href="#ux-goals">1.1. Project goals</a>
+  - <a href="#ux-stories">1.2 User stories</a>
+  - <a href="#ux-design">1.3 Design</a>
+  - <a href="#db-schema">1.4 Database Schema</a>
+  - <a href="#ux-mockup">1.5 Mockup designs</a>
+- <a href="#features">2. Features</a>
+- <a href="#technologies">3. Technologies used</a>
+- <a href="#testing">4. Testing</a>
+- <a href="#deployment">5. Deployment</a>
+- <a href="#credits">6. Credits</a>
+
+<span id="ux"></span>
+
 ## User Experience (UX)
-This web application is designed for those who wish to learn about bars in their current area as well as share reviews 
-themselves about their experiences at bars they have visited
+
+<span id="ux-goals"></span>
+
+#### Project goals 
+
+- Making a full-stack site that allows users to manage a common dataset about a particular domain. 
+- Making a full-stack site that uses HTML, CSS, JavaScript, Python+Flask and MongoDB. 
+- Creating a website that is simple to understand and easy to navigate.
+- The users of the website can make use of CRUD (create, read, update and delete) for the reviews. 
+This web application is designed for those who wish to learn about bars in their current area as well as share reviews about their experiences at bars they have visited.
 
 The application is aimed at:
 
 - people who like visting bars for an experience
 - people who work in the industry
 
-Users of the application are able to create an account and submit reviews of bars that they think deserve attention. They are also able to edita nd delete their reviews as they see fit.
+Users of the application are able to create an account and submit reviews of bars that they think deserve attention. They are also able to edit and delete their reviews as they see fit.
+
+<span id="ux-stories"></span>
 
 ### User Stories
 
@@ -47,6 +80,8 @@ Users of the application are able to create an account and submit reviews of bar
 - As a **site owner**, I want to allow the user to easily edit and delete any reviews thay've added to the site
 - As a **site owner**, I want all visitors and registered users to be able to easily contact me through email or social media platforms
 
+<span id="ux-design"></span>
+
       
 -   ### Design
     -   #### Colour Scheme
@@ -55,11 +90,15 @@ Users of the application are able to create an account and submit reviews of bar
         -   The font I used for the header is Anton from Google Fonts as I felt it was a minimal, yet strong and stiking font that feels very magazine-ish. For the other text I used Raleway from Google fonts with a back up of Sans Serif.
     -   #### Imagery
         -   The images featured on the site are cocktails with exciting garnishing, elegant glasswear are well styled and lit, with vibrant colors and elegant content. Credits can be found below
+
+    -   #### Icons
+        -   In the project, icons are used that are provided by [Font Awesome](https://fontawesome.com/). The Icons that are used have functional purposes such as the hamburger menu and social media icons. 
         
 *   ### Wireframe
     -Wireframes were done in photoshop. As I focus very much on images, fonts and colors I find that photoshop is more useful for me when wireframing. The wireframes evolved and served as a testing ground for new layouts and features. 
     The main template layout consists of a header, navbar and the footer, and is used across the site.
    
+<span id="db-schema"></span>
 
 ## Database Schema
 
@@ -85,6 +124,8 @@ MongoDB Atlas was the cloud database service used to create and store the databa
 | email: | "string" |
 | password: | "string" |
 
+<span id="features"></span>
+
 ## Features
 
 -   Responsive on different device sizes
@@ -99,6 +140,7 @@ MongoDB Atlas was the cloud database service used to create and store the databa
 * In the future I would like to implement a recipe form for users to add recipes of cocktails
 * An admin page could be advantageous so that one can administate via the application rather than go into Mongo DB
 
+<span id="technologies"></span>
 
 ## Technologies Used
 
@@ -153,6 +195,7 @@ MongoDB Atlas was the cloud database service used to create and store the databa
 1. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
    - A comprehensive WSGI web applications library
 
+<span id="deployment"></span>
 
 ## Deployment
 
@@ -203,12 +246,12 @@ To clone the repository on GitHub and make a local copy on your computer, follow
 - To then run the repository locally, install the required dependencies from the **requirements.txt** file: ```pip3 install requirements.txt```
 - Run the app from your local IDE using the following command: ```python3 app.py```
 
-# Testing
-All buttons have been manually tested and function. All templates showed errors when run through the html validator.
-The css validator returned an error stating that 4px is not a valid text decoration value. I checked on MDN WebDocs and it validated my use.
-It also showed warnings for unknown vendors. These we can ignore.
+<span id="testing"></span>
 
-### Validating code
+# Testing
+The testing process can be found [here](TESTING.md).
+
+### Testing tools Used
 
 * HTML
 code is validated through [W3 validator](https://validator.w3.org/).
@@ -222,16 +265,20 @@ code is validated through [JS Hint](https://jshint.com/).
 * Python
 code is validated through [PEP8](http://pep8online.com/).
 
+* Chrome Devtools
+is used to detect problems and test responsiveness  [CHROME DEVTOOLS](https://developers.google.com/web/tools/chrome-devtools/open).
+
+<span id="credits"></span>
 
 ## Credits
 
 ### Media
 
-Images used on the site have been sourced from liquor.com and delicious.com
+Images used on the site have been sourced from liquor.com and delicious.com.
 
 ### Content
 
--   Concept, design, coding and text has been created by myself. Wikipedia has also been used for extra research 
+-   Concept, design, coding and text has been created by myself. Wikipedia has also been used for extra research. 
 
 ## Coding Sources
 
@@ -240,3 +287,5 @@ Images used on the site have been sourced from liquor.com and delicious.com
 ## Acknowledgments
 
 * Huge thanks to the gang at Code Institute Tutor Support and student Care for all their guidance, patience and support.
+
+<a href="#bestbars">Back to top!</a>
