@@ -11,8 +11,6 @@ Everyone is welcome to create an account and add their reviews. If the user has 
 
 The website is responsive and available on desktop, laptops, tablets and mobile devices.
 
-The image above is a screenshot of the site displayed on different devices using [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/).
-
 **[The live project can be viewed here.](https://best-bars.herokuapp.com/)**
 
 ---
@@ -97,6 +95,7 @@ Users of the application are able to create an account and submit reviews of bar
 *   ### Wireframe
     -Wireframes were done in photoshop. As I focus very much on images, fonts and colors I find that photoshop is more useful for me when wireframing. The wireframes evolved and served as a testing ground for new layouts and features. 
     The main template layout consists of a header, navbar and the footer, and is used across the site.
+    Wireframes for this project may be viewed in a seperate file [here](wireframes.md).
    
 <span id="db-schema"></span>
 
