@@ -7,9 +7,9 @@
   <div class="row form-group">
     <div class="col">
         <form method="POST" action="{{ url_for('register') }}">
-              <input type="text" class="form-control" id="username" name="username" minlength="2" maxlength="20" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Username" required />
+              <input type="text" class="form-control" id="username" name="username" minlength="2" maxlength="20" pattern="^[a-zA-Z0-9]{2,20}$" placeholder="Username" required />
               <input type="email" class="form-control" id="emailaddress" name="email" minlength="10" placeholder="Email" required />
-              <input type="password" class="form-control" id="password" name="password" minlength="2" maxlength="20" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Password" required />
+              <input type="password" class="form-control" id="password" name="password" minlength="2" maxlength="20" pattern="^[a-zA-Z0-9]{2,20}$" placeholder="Password" required />
               <div class="row text-center">
                 <div class="col form-button">
                   <button type="submit" class="btn btn-dark">Register</button>
