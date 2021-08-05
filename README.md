@@ -124,6 +124,10 @@ MongoDB Atlas was the cloud database service used to create and store the databa
 | email: | "string" |
 | password: | "string" |
 
+### Wireframes
+
+Wireframes for this project may be viewed in a seperate file [here](wireframes.md).
+
 <span id="features"></span>
 
 ## Features
