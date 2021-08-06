@@ -45,16 +45,16 @@
 
 <span id="browser-compatibility"></span>
 
-## 3. Browser compatibility
+## 3. Browser Compatibility
 ![Browser compatibility](readme_img/testing/browser-compatibility.png)
 
 --- 
 
 <span id="user-stories"></span>
 
-## 4. Testing user stories 
+## 4. Testing User Stories 
 
-### First-time visitor goals:
+### First Time Visitor Goals:
 1. As a first time visitor, I want to be able to visit the website on every device, so that I can look at the website on desktop, mobile and tablet. 
     - The first time visitor can visit the website on a computer, laptop, tablet and phone.
 2. As a first time visitor, I want to be able to navigate easily through the website, so I can find everything easily. 
@@ -67,7 +67,7 @@
     - The first time visitor can navigate to the register page by clicking on register button in the navbar.
 
 
-### Site member goals
+### Registered User Goals
 1. As a site member, I want to add my reviews, so I can share my reviews with others.
     - A site member can add reviews by clicking on 'write Review' in the navbar. 
 2. As a site member, I want to edit my reviews, so I can update/correct information in the review.
@@ -78,7 +78,7 @@
 5. As a site member, I want to logout of my profile, so I can be logged out. 
     - As a site member is logged in they can logout by clicking on logout in the navbar.
 
-### Admin goals
+### Site Owner Goals
 1. As a site owner, I want to provide the user with a description about the purpose of the site 
     - There is a description for the website at the top of the landing page.
 2. As a site owner, I want to include a navigation bar to allow users to easily and intuitively navigate to other pages on the site 
@@ -95,7 +95,7 @@
 ---
 <span id="defensive-design"></span>
 
-## 5. Defensive design 
+## 5. Defensive Design 
 
 1. The user is not able to break the site by clicking on any of the buttons. 
 
