@@ -92,7 +92,9 @@ Users of the application are able to create an account and submit reviews of bar
     -   #### Icons
         -   In the project, icons are used that are provided by [Font Awesome](https://fontawesome.com/). The Icons that are used have functional purposes such as the hamburger menu and social media icons. 
         
-*   ### Wireframe
+<span id="db-schema"></span>
+
+*   ### Wireframes
     -Wireframes were done in photoshop. As I focus very much on images, fonts and colors I find that photoshop is more useful for me when wireframing. The wireframes evolved and served as a testing ground for new layouts and features. 
     The main template layout consists of a header, navbar and the footer, and is used across the site.
     Wireframes for this project may be viewed in a seperate file [here](wireframes.md).
