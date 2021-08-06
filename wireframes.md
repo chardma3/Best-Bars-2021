@@ -5,4 +5,4 @@
 ![wireframes](wireframes/register.png) <br>
 ![wireframes](wireframes/reviews_sm.png) <br>
 ![wireframes](wireframes/reviews.png) <br>
-![wireframes](wireframes/write review.png) <br>
+![wireframes](wireframes/write_review.png) <br>
