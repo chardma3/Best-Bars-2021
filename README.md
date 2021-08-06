@@ -22,12 +22,12 @@ The website is responsive and available on desktop, laptops, tablets and mobile 
   - <a href="#ux-stories">1.2 User stories</a>
   - <a href="#ux-design">1.3 Design</a>
   - <a href="#ux-wireframes">1.4 Wireframes</a>
-- <a href="#db-schema">1.4 Database Schema</a>
-- <a href="#features">2. Features</a>
-- <a href="#technologies">3. Technologies used</a>
-- <a href="#testing">4. Testing</a>
-- <a href="#deployment">5. Deployment</a>
-- <a href="#credits">6. Credits</a>
+- <a href="#db-schema">2. Database Schema</a>
+- <a href="#features">3. Features</a>
+- <a href="#technologies">4. Technologies used</a>
+- <a href="#testing">5. Testing</a>
+- <a href="#deployment">6. Deployment</a>
+- <a href="#credits">7. Credits</a>
 
 <span id="ux"></span>
 
@@ -35,7 +35,7 @@ The website is responsive and available on desktop, laptops, tablets and mobile 
 
 <span id="ux-goals"></span>
 
-#### Project goals 
+### Project goals 
 
 - Making a full-stack site that allows users to manage a common dataset about a particular domain. 
 - Making a full-stack site that uses HTML, CSS, JavaScript, Python+Flask and MongoDB. 
