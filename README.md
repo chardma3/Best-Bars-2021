@@ -21,8 +21,8 @@ The website is responsive and available on desktop, laptops, tablets and mobile 
   - <a href="#ux-goals">1.1. Project goals</a>
   - <a href="#ux-stories">1.2 User stories</a>
   - <a href="#ux-design">1.3 Design</a>
-  - <a href="#db-schema">1.4 Database Schema</a>
-  - <a href="#ux-mockup">1.5 Mockup designs</a>
+  - <a href="#ux-wireframes">1.4 Wireframes</a>
+- <a href="#db-schema">1.4 Database Schema</a>
 - <a href="#features">2. Features</a>
 - <a href="#technologies">3. Technologies used</a>
 - <a href="#testing">4. Testing</a>
@@ -79,7 +79,6 @@ Users of the application are able to create an account and submit reviews of bar
 - As a **site owner**, I want all visitors and registered users to be able to easily contact me through email or social media platforms
 
 <span id="ux-design"></span>
-
       
 -   ### Design
     -   #### Colour Scheme
@@ -92,7 +91,7 @@ Users of the application are able to create an account and submit reviews of bar
     -   #### Icons
         -   In the project, icons are used that are provided by [Font Awesome](https://fontawesome.com/). The Icons that are used have functional purposes such as the hamburger menu and social media icons. 
         
-<span id="db-schema"></span>
+<span id="ux-wireframes"></span>
 
 *   ### Wireframes
     -Wireframes were done in photoshop. As I focus very much on images, fonts and colors I find that photoshop is more useful for me when wireframing. The wireframes evolved and served as a testing ground for new layouts and features. 
@@ -124,10 +123,6 @@ MongoDB Atlas was the cloud database service used to create and store the databa
 | username: | "string" |
 | email: | "string" |
 | password: | "string" |
-
-### Wireframes
-
-Wireframes for this project may be viewed in a seperate file [here](wireframes.md).
 
 <span id="features"></span>
 
