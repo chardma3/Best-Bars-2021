@@ -1,15 +1,14 @@
-<h1 align="center">Testing</h1>
+<h1>Testing</h1>
 
 ---
 
 ## Index 
 
-- <a href="#validators">1. Code validators</a>
+- <a href="#validators">1. Code Validators</a>
 - <a href="#responsiveness">2. Responsiveness</a>
-- <a href="#browser-compatibility">3. Browser compability</a>
-- <a href="#user-stories">4. Testing user stories </a>
-- <a href="#defensive-design">5. Defensive design</a>
-- <a href="#bugs">5. Bugs</a>
+- <a href="#browser-compatibility">3. Browser Compability</a>
+- <a href="#user-stories">4. Testing User Stories </a>
+- <a href="#defensive-design">5. Defensive Design</a>
 
 ---
 
@@ -80,12 +79,18 @@
     - As a site member is logged in they can logout by clicking on logout in the navbar.
 
 ### Admin goals
-1. As an admin, I want to add new categories, so I can make the categories clear and manageable. 
-    - The admin can add new categories by going to the category page and to click on add category.
-2. As an admin, I want to edit categories, so I can update categories. 
-    - The admin can edit categories by going to the category page and to click on edit category.
-3. As an admin, I want to delete categories, so I can remove categories when they are no longer relevant. 
-    - the admin can delete a categorie by going to the category page and to click on delete category.
+1. As a site owner, I want to provide the user with a description about the purpose of the site 
+    - There is a description for the website at the top of the landing page.
+2. As a site owner, I want to include a navigation bar to allow users to easily and intuitively navigate to other pages on the site 
+    - There is a search bar that searches for any instances of the word in the navbar available on all pages, including the hamburger menu.
+3. As a site owner, I want to provide the user with access to reviews without having to create an account 
+    - Users that are not logged in can view the reviews page.
+    4. As a site owner, I want to allow the user to easily sign up for an account to allow them to write their own reviews 
+    - There is a link to the registration page in the navbar and the fields required are few and easy to fill in making it an easy ux. I find it a bad ux when there are too many fields to fill in and often will leave the site.
+5. As a site owner, I want to allow the user to easily edit and delete any reviews thay've added to the site 
+    - There are edit and delete buttons at the bottom of a users reviews allowing them to go to the edit page where they can edit the review or delete it.
+6. As a site owner, I want all visitors and registered users to be able to easily contact me through email or social media platforms 
+    - There is an email adress and social media icons in the footer of the page where users can contact me.
 
 ---
 <span id="defensive-design"></span>
@@ -114,7 +119,7 @@ See below the input fields for front end validation:
     
     ```
     Register: 
-<input type="text" class="form-control" id="username" name="username" minlength="2" maxlength="20" placeholder="Username" required />
+             <input type="text" class="form-control" id="username" name="username" minlength="2" maxlength="20"    placeholder="Username" required />
               <input type="email" class="form-control" id="emailaddress" name="email" minlength="10" placeholder="Email" required />
               <input type="password" class="form-control" id="password" name="password" minlength="2" maxlength="20" placeholder="Password" required />
 
