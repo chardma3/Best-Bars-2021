@@ -19,7 +19,9 @@
 
     ![warning](readme_img/testing/html-validator.png)
 
-- **[CSS Validator](https://jigsaw.w3.org/css-validator/):** No errors found.
+- **[CSS Validator](https://jigsaw.w3.org/css-validator/)
+** The css validator returned an error stating that 4px is not a valid text decoration value. I checked on MDN WebDocs and it validated my use.
+It also showed warnings for unknown vendors. These we can ignore.
 ![CSS Validator](readme_img/testing/css-validator.png)
 
 - **[JS Hint](https://jshint.com/):** No errors found, no warnings, one undefined variable 
