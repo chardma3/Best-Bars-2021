@@ -156,24 +156,23 @@ def delete_review(review_id):
     return redirect(url_for("get_reviews"))
 
 
+# ---------------------------------------------------------- ERROR HANDLERS #
 @app.errorhandler(404)
-# 404 error handler
 def page_not_found(e):
     return render_template("404.html"), 404
 
 
 @app.errorhandler(500)
-# 500 error handle
 def page_not_found(e):
     return render_template('500.html'), 500
 
 
 @app.errorhandler(403)
-# 403 error handler
 def page_not_found(e):
     return render_template('403.html'), 403
 
 
+# ---------------------------------------------------------- RUN THE APP  #
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
