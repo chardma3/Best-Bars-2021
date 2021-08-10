@@ -25,6 +25,7 @@ def index():
     return render_template('index.html')
 
 
+# ------------------------------------------------------------- REVIEWS  #
 @app.route("/get_reviews")
 # Render reviews
 def get_reviews():
@@ -163,13 +164,13 @@ def page_not_found(e):
 
 
 @app.errorhandler(500)
-def page_not_found(e):
-    return render_template('500.html'), 500
+def server_error(e):
+    return render_template("500.html"), 500
 
 
 @app.errorhandler(403)
-def page_not_found(e):
-    return render_template('403.html'), 403
+def forbidden(e):
+    return render_template("403.html"), 403
 
 
 # ---------------------------------------------------------- RUN THE APP  #
