@@ -2,7 +2,7 @@
 {% block content %}
 <!-- Welcome section -->
 <div class="container-fluid">
-    <div class="row mt-3">
+    <div class="row mt-3 section-row">
         <div class="col p-5 main">
             <h1 class="text-center">WELCOME!</h1>
             <h5 class="text-center">Welcome to this cocktail and bar loving website that wants you to be apart
@@ -17,16 +17,16 @@
                 "If a life of wine, women and singing gets too much, give up the singing"
             </h5>
         </div>
-        <div class="col-12 col-md-6 my-auto d-none d-xl-block"><img
+        <div class="col-12 col-md-6 my-auto d-none d-xl-block side-img"><img
                 src="{{ url_for('static', filename='images/drink_one.jpg') }}" alt="cocktail">
         </div>
     </div>
 </div>
 <!-- Section 2 -->
-<div class="container-fluid mt-4"><img src="{{ url_for('static', filename='images/bg_hero.jpg') }}" alt="cocktail">
+<div class="container-fluid mt-4"><img src="{{ url_for('static', filename='images/bg_hero.jpg') }}" alt="cocktail" class="bg-img">
 </div>
 <div class="container-fluid">
-    <div class="row mt-3">
+    <div class="row mt-3 section-row">
         <div class="col p-5 main">
             <h1 class="text-center pt-2">DID YOU KNOW?</h1>
             <p class="text-center px-5">The word cocktail originated in the United States in the 17th century but didn't
@@ -44,15 +44,15 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-6 my-auto d-none d-xl-block"><img src="{{ url_for('static', filename='images/drink_two.jpg') }}" alt="cocktail">
+        <div class="col-12 col-md-6 my-auto d-none d-xl-block side-img"><img src="{{ url_for('static', filename='images/drink_two.jpg') }}" alt="cocktail">
         </div>
     </div>
 </div>
 <!-- Section 3 -->
-<div class="container-fluid mt-4"><img src="{{ url_for('static', filename='images/bg_two.jpg') }}" alt="cocktail"></div>
+<div class="container-fluid mt-4"><img src="{{ url_for('static', filename='images/bg_two.jpg') }}" alt="cocktail" class="bg-img"></div>
 <div class="container-fluid mt-4">
-    <div class="row mt-3">
-        <div class="col-12 col-md-6 my-auto d-none d-xl-block"><img src="{{ url_for('static', filename='images/drink_three.jpg') }}"
+    <div class="row mt-3 section-row">
+        <div class="col-12 col-md-6 my-auto d-none d-xl-block side-img"><img src="{{ url_for('static', filename='images/drink_three.jpg') }}"
                 alt="cocktail">
         </div>
         <div class="col p-5 main">
@@ -72,10 +72,10 @@
     </div>
 </div>
 <!-- Section 4 -->
-<div class="container-fluid mt-4"><img src="{{ url_for('static', filename='images/bg_three.jpg') }}" alt="cocktail">
+<div class="container-fluid mt-4"><img src="{{ url_for('static', filename='images/bg_three.jpg') }}" alt="cocktail" class="bg-img">
 </div>
 <div class="container-fluid mt-4 mb-3">
-    <div class="row mt-3">
+    <div class="row mt-3 section-row">
         <div class="col p-5 main">
             <h1 class="text-center pt-2">DID YOU KNOW?</h1>
             <p class="text-center px-5">Prohibition in the United States may have banned liquor, but spirits flowed
@@ -93,7 +93,7 @@
             </div>
 
         </div>
-        <div class="col-12 col-md-6 my-auto d-none d-xl-block"><img src="{{ url_for('static', filename='images/drink_four.jpg') }}"
+        <div class="col-12 col-md-6 my-auto d-none d-xl-block side-img"><img src="{{ url_for('static', filename='images/drink_four.jpg') }}"
                 alt="cocktail"></div>
     </div>
 </div>
