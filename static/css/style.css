@@ -20,6 +20,10 @@ img {
     overflow: hidden;
 }
 
+.bg-img {
+    height:700px;
+}
+
 ul {
     display: table;
     margin: 0 auto;
@@ -40,10 +44,6 @@ ul {
 
 .main {
     background-color: #DC0073;
-}
-
-.yellow-quotation {
-    background-color: #F5B700;
 }
 
 .border {
