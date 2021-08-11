@@ -38,16 +38,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav nav-fill w-100">
-                    <li class="nav-item mr-2"><a class="nav-link" href="{{ url_for('index') }}">HOME</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="{{ url_for('get_reviews') }}">REVIEWS</a></li>
+                    <li class="nav-item mr-2 {% if isActive %} active {% endif %}"><a class="nav-link" href="{{ url_for('index') }}">HOME</a></li>
+                    <li class="nav-item mr-2 {% if isActive %} active {% endif %}"><a class="nav-link" href="{{ url_for('get_reviews') }}">REVIEWS</a></li>
                     {% if session.user %}
-                    <li class="nav-item mr-2"><a class="nav-link" href="{{ url_for('write_review') }}">WRITE REVIEW</a>
+                    <li class="nav-item mr-2 {% if isActive %} active {% endif %}"><a class="nav-link" href="{{ url_for('write_review') }}">WRITE REVIEW</a>
                     </li>
-                    <li class="nav-item mr-2"><a class="nav-link"
+                    <li class="nav-item mr-2 {% if isActive %} active {% endif %}"><a class="nav-link"
                             href="{{ url_for('logout', username=session['user']) }}">LOG OUT</a></li>
                     {% else %}
-                    <li class="nav-item mr-2"><a class="nav-link" href="{{ url_for('login') }}">LOGIN</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="{{ url_for('register') }}">REGISTER</a></li>
+                    <li class="nav-item mr-2 {% if isActive %} active {% endif %}"><a class="nav-link" href="{{ url_for('login') }}">LOGIN</a></li>
+                    <li class="nav-item mr-2 {% if isActive %} active {% endif %}"><a class="nav-link" href="{{ url_for('register') }}">REGISTER</a></li>
                     {% endif %}
                     <li class="d-flex">
                         <form action="{{ url_for('search') }}" method="POST" class="d-flex">
