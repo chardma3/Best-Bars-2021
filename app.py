@@ -25,22 +25,7 @@ def index():
     return render_template('index.html')
 
 
-# ------------------------------------------------------------- REVIEWS  #
-@app.route("/get_reviews")
-# Render reviews
-def get_reviews():
-    reviews = mongo.db.reviews.find()
-    return render_template("reviews.html", reviews=reviews)
-
-
-@app.route("/search", methods=["GET", "POST"])
-# Search functionality
-def search():
-    query = request.form.get("query")
-    reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
-    return render_template("reviews.html", reviews=reviews)
-
-
+# ------------------------------------------------------------- USERS #
 @app.route("/register", methods=["GET", "POST"])
 # Render register page
 def register():
@@ -106,6 +91,22 @@ def logout():
     flash("You've been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+# ------------------------------------------------------------- REVIEWS  #
+@app.route("/get_reviews")
+# Render reviews
+def get_reviews():
+    reviews = mongo.db.reviews.find()
+    return render_template("reviews.html", reviews=reviews)
+
+
+@app.route("/search", methods=["GET", "POST"])
+# Search functionality
+def search():
+    query = request.form.get("query")
+    reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
+    return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/write_review", methods=["GET", "POST"])
