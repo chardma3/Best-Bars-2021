@@ -2,9 +2,9 @@
 {% block content %}
 
 <h3 class="text-center mt-4">Write Review</h3>
+
 <!-- Write Review Form -->
-      <div class="form-group">
-        <div class="row">
+      <div class="row form-group">
           <div class="col">
             <form method="POST" action="{{ url_for('write_review') }}">
               <input type="text" class="form-control" name="bar_name" id="name" placeholder="Bar Name" minlength="2" maxlength="30" required />
