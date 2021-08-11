@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 # ------------------------------------------------------------- HOMEPAGE  #
 @app.route("/")
 def index():
-    return render_template('index.html', active=True)
+    return render_template('index.html', page="index")
 
 
 # ------------------------------------------------------------- USERS #
@@ -50,7 +50,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("get_reviews", username=session["user"]))
 
-    return render_template("register.html, active=True")
+    return render_template("register.html", page="register")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -81,7 +81,7 @@ def login():
             flash("Incorrect User Details")
             return redirect(url_for("login"))
 
-    return render_template("login.html", active=True)
+    return render_template("login.html", page="login")
 
 
 @app.route("/logout")
@@ -98,7 +98,7 @@ def logout():
 # Render reviews
 def get_reviews():
     reviews = mongo.db.reviews.find()
-    return render_template("reviews.html", reviews=reviews, active=True)
+    return render_template("reviews.html", reviews=reviews, page="get_reviews")
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -106,7 +106,7 @@ def get_reviews():
 def search():
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
-    return render_template("reviews.html", reviews=reviews, active=True)
+    return render_template("reviews.html", reviews=reviews, page="get_reviews")
 
 
 @app.route("/write_review", methods=["GET", "POST"])
@@ -130,7 +130,7 @@ def write_review():
         return redirect(url_for("get_reviews"))
 
     bars = mongo.db.bars.find().sort("bar_name", 1)
-    return render_template("write_review.html", bars=bars, active=True)
+    return render_template("write_review.html", bars=bars, page="write_review")
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -155,7 +155,7 @@ def edit_review(review_id):
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     bars = mongo.db.bars.find().sort("bar_name", 1)
-    return render_template("edit_review.html", review=review, bars=bars,  active=True)
+    return render_template("edit_review.html", review=review, bars=bars, page="edit_review")
 
 
 @app.route("/delete_review/<review_id>")

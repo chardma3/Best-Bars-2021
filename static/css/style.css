@@ -91,7 +91,7 @@ color: black;
 }
 
 .active {
-    color: black;
+    color: black !important;
 }
 
 .heading-link {
