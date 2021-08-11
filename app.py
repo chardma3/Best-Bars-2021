@@ -112,11 +112,15 @@ def search():
 @app.route("/write_review", methods=["GET", "POST"])
 # Render write review page
 def write_review():
+    # Only users can write reviews
+    if not session.get("user"):
+        return render_template("403.html")
+
+    #Add review to db
     if request.method == "POST":
         review = {
             "bar_name": request.form.get("bar_name"),
             "review": request.form.get("review"),
-            "picture": request.form.get("picture"),
             "fav_drink": request.form.get("fav_drink"),
             "location": request.form.get("location"),
             "created_by": session["user"]
@@ -132,11 +136,15 @@ def write_review():
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 # Render edit review page
 def edit_review(review_id):
+    # Only users can edit reviews
+    if not session.get("user"):
+        return render_template("403.html")
+
+    # Edit review on db
     if request.method == "POST":
         submit = {
             "bar_name": request.form.get("bar_name"),
             "review": request.form.get("review"),
-            "picture": request.form.get("picture"),
             "fav_drink": request.form.get("fav_drink"),
             "location": request.form.get("location"),
             "created_by": session["user"]
@@ -153,6 +161,10 @@ def edit_review(review_id):
 @app.route("/delete_review/<review_id>")
 # Delete functionality
 def delete_review(review_id):
+    # Only users can delete reviews
+    if not session.get("user"):
+        return render_template("403.html")
+
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted!")
     return redirect(url_for("get_reviews"))
