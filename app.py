@@ -161,7 +161,8 @@ def edit_review(review_id):
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     bars = mongo.db.bars.find().sort("bar_name", 1)
-    return render_template("edit_review.html", review=review, bars=bars, page="edit_review")
+    return render_template(
+        "edit_review.html", review=review, bars=bars, page="edit_review")
 
 
 @app.route("/delete_review/<review_id>")
