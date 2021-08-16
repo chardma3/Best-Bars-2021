@@ -9,6 +9,7 @@
 - <a href="#browser-compatibility">3. Browser Compability</a>
 - <a href="#user-stories">4. Testing User Stories </a>
 - <a href="#defensive-design">5. Defensive Design</a>
+- <a href="#bugs">6. Bugs</a>
 
 ---
 
@@ -19,9 +20,8 @@
 
     ![warning](readme_img/testing/html-validator.png)
 
-- **[CSS Validator](https://jigsaw.w3.org/css-validator/)
-** The css validator returned an error stating that 4px is not a valid text decoration value. I checked on MDN WebDocs and it validated my use.
-It also showed warnings for unknown vendors. These we can ignore.
+ - **[CSS Validator](https://jigsaw.w3.org/css-validator/):** The css validator returned an error stating that 4px is not a valid text decoration value. I checked on MDN WebDocs and it validated my use. Igor from tutor support also said this was correct. 
+I have errors and warnings from Bootstrap. Jo from Tutor support said they can be ignored as with other error and warnings from external libraries.
 ![CSS Validator](readme_img/testing/css-validator.png)
 
 - **[JS Hint](https://jshint.com/):** No errors found, no warnings, one undefined variable 
@@ -137,6 +137,29 @@ See below the input fields for front end validation:
 
 **Answer 5:** If someone clicks on the delete button, a modal (from bootstrap) will pop up with the text: Are you sure you want to delete the review. If the user clicks again on delete the review will be deleted from the database.
 
----
+--- 
+<span id="bugs"></span>
+
+## 6. Bugs | Solved
+
+1. The biggest bug found that plagued the project from the beginning was a container fluid inside a container fluid. This container fluid was in the base and then I had put further container fluids on the index page for each section. This caused huge layout problems. Thanks to Alan in tutor support for spotting this straight away. After this everything started working as it should.
+2. I was having problems with error handlers because I didn't set them specifically. So in otherwords it was a typo issue that I couldn't see no matter how hard I stared at. But finally found the problem. Checked the 403 forbidden, 500 internal server error and 404 page not found template worked by running this in the app.py file and in the broswer. Thanks to John in tutoring for helping me with that.
+
+    Error handler test: 
+            @app.route("/testing")
+            def testing():
+                test = None
+                if test is None:
+                    abort(404)
+                return redirect('/')
+
+3. My mentor Precious pointed out that users not in session aka not registered or logged in were able to edit and write reviews. I fixed this by checking to make sure the user was in session. If not they were shown a 403 forbidden page.
+
+    Check for if user in session: 
+    # Only users can delete reviews
+    if not session.get("user"):
+        return render_template("403.html")
+
+--- 
 
 [Go to README.md file](README.md).
