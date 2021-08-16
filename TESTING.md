@@ -63,7 +63,7 @@ I have errors and warnings from Bootstrap. Jo from Tutor support said they can b
     - The first time visitor can navigate through the website with the navbar. The navbar is on top of the website. For the mobile visitors there is a hamburger menu. 
 3. As a first time visitor, I want to see all reviews, so I can get ideas of where to go.
     - The first time visitor can visit all reviews by clicking on reviews in the navbar.  On this page there are all the reviews posted by users.  
-4. As a first time visitor, I want to be able to search reviews based on words, so I can find reviews easily. (For example, I can search for the word mezcal and all reviews with the mezcal or Stockholm in the review will appear.)
+4. As a first time visitor, I want to be able to search reviews based on words found in bar name, review, fav drink, location, so I can find reviews easily. (For example, I can search for the word mezcal and all reviews with the mezcal or Stockholm in the review will appear.)
     - In the navbar there is a searchbar, where first time visitors can search for words.  
 5. As a first time visitor, I want to register an account on the website, so I can share my reviews. 
     - The first time visitor can navigate to the register page by clicking on register button in the navbar.
