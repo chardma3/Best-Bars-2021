@@ -1,97 +1,99 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Welcome section -->
-    <div class="row mt-3">
-        <div class="col p-5 main">
-            <h1 class="text-center">WELCOME!</h1>
-            <h5 class="text-center">Welcome to this cocktail and bar loving website that wants you to be apart
-                of finding the best bars and cocktails in the world.
-                Inspired by Hollywood and created in the stars, this website consists of fun facts, recipes and of
-                course reviews submitted by you!
-                Here at Best Bars 2021 we hope to be as Iconic as the Sidecar, as Dizzying as Death in the Afternoon and
-                as
-                dazzling as a Pina Colada Tini.</h5>
-            <br/>
-            <h5 class="text-center font-italic px-5">
-                "If a life of wine, women and singing gets too much, give up the singing"
-            </h5>
-        </div>
-        <div class="col-12 col-md-6 d-none d-xl-block px-0"><img
-                src="{{ url_for('static', filename='images/drink_one.jpg') }}" alt="cocktail" class="side-img">
-        </div>
+<div class="row mt-3">
+    <div class="col p-5 main">
+        <h1 class="text-center">WELCOME!</h1>
+        <h5 class="text-center">Welcome to this cocktail and bar loving website that wants you to be apart
+            of finding the best bars and cocktails in the world.
+            Inspired by Hollywood and created in the stars, this website consists of fun facts, recipes and of
+            course reviews submitted by you!
+            Here at Best Bars 2021 we hope to be as Iconic as the Sidecar, as Dizzying as Death in the Afternoon and
+            as
+            dazzling as a Pina Colada Tini.</h5>
+        <br />
+        <h5 class="text-center font-italic px-5">
+            "If a life of wine, women and singing gets too much, give up the singing"
+        </h5>
     </div>
+    <div class="col-12 col-md-6 d-none d-xl-block px-0"><img
+            src="{{ url_for('static', filename='images/drink_one.jpg') }}" alt="cocktail" class="side-img">
+    </div>
+</div>
 </div>
 <!-- Section 2 -->
 <div class="row mt-4"><img src="{{ url_for('static', filename='images/bg_hero.jpg') }}" alt="cocktail" class="bg-img">
 </div>
-    <div class="row mt-3">
-        <div class="col p-5 main">
-            <h1 class="text-center pt-2">DID YOU KNOW?</h1>
-            <p class="text-center px-5">The word cocktail originated in the United States in the 17th century but didn't
-                gain popularity until the middle of the 1800s.
-                This popularity is thanks in large part to Jerry Thomas, the granddad of mixology, who published his
-                bartender's guide in 1862.</p>
-            <div class="col">
-                <h3 class="text-center">Margarita</h3>
-                <ul>
-                    <li>30ml tequila</li>
-                    <li>20ml cointreu</li>
-                    <li>5ml lime juice</li>
-                    <li>1ml sugar syrup</li>
-                </ul>
-            </div>
+<div class="row mt-3">
+    <div class="col p-5 main">
+        <h1 class="text-center pt-2">DID YOU KNOW?</h1>
+        <p class="text-center px-5">The word cocktail originated in the United States in the 17th century but didn't
+            gain popularity until the middle of the 1800s.
+            This popularity is thanks in large part to Jerry Thomas, the granddad of mixology, who published his
+            bartender's guide in 1862.</p>
+        <div class="col">
+            <h3 class="text-center">Margarita</h3>
+            <ul>
+                <li>30ml tequila</li>
+                <li>20ml cointreu</li>
+                <li>5ml lime juice</li>
+                <li>1ml sugar syrup</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="col-12 col-md-6 d-none d-xl-block px-0"><img src="{{ url_for('static', filename='images/drink_two.jpg') }}" alt="cocktail" class="side-img">
-        </div>
+    <div class="col-12 col-md-6 d-none d-xl-block px-0"><img
+            src="{{ url_for('static', filename='images/drink_two.jpg') }}" alt="cocktail" class="side-img">
     </div>
 </div>
+</div>
 <!-- Section 3 -->
-<div class="row mt-4"><img src="{{ url_for('static', filename='images/bg_two.jpg') }}" alt="cocktail" class="bg-img"></div>
-    <div class="row mt-3">
-        <div class="col-12 col-md-6 d-none d-xl-block px-0"><img src="{{ url_for('static', filename='images/drink_three.jpg') }}"
-                alt="cocktail" class="side-img">
-        </div>
-        <div class="col p-5 main">
-            <h1 class="text-center pt-2">DEATH IN THE AFTERNOON</h1>
-            <p class="text-center px-5">Ernest Hemingway invented this one because of his love of absinthe during his
-                time in France. Death in
-                the Afternoon was also his contribution to “So Red the Nose, or Breath in the Afternoon,”
-                a 1935 cocktail book featuring recipes from 30 celebrity authors. He also wrote the 1932 book by the
-                same name during that period. His recipe for the drink is as follows:</p>
-            <br/>
-            <h5 class="text-center font-italic px-5">
-                "Pour one jigger absinthe into a Champagne glass. Add iced Champagne until it attains the proper
-                opalescent milkiness. Drink three to five of these slowly"
-            </h5>
-        </div>
-
+<div class="row mt-4"><img src="{{ url_for('static', filename='images/bg_two.jpg') }}" alt="cocktail" class="bg-img">
+</div>
+<div class="row mt-3">
+    <div class="col-12 col-md-6 d-none d-xl-block px-0"><img
+            src="{{ url_for('static', filename='images/drink_three.jpg') }}" alt="cocktail" class="side-img">
     </div>
+    <div class="col p-5 main">
+        <h1 class="text-center pt-2">DEATH IN THE AFTERNOON</h1>
+        <p class="text-center px-5">Ernest Hemingway invented this one because of his love of absinthe during his
+            time in France. Death in
+            the Afternoon was also his contribution to “So Red the Nose, or Breath in the Afternoon,”
+            a 1935 cocktail book featuring recipes from 30 celebrity authors. He also wrote the 1932 book by the
+            same name during that period. His recipe for the drink is as follows:</p>
+        <br />
+        <h5 class="text-center font-italic px-5">
+            "Pour one jigger absinthe into a Champagne glass. Add iced Champagne until it attains the proper
+            opalescent milkiness. Drink three to five of these slowly"
+        </h5>
+    </div>
+
+</div>
 </div>
 <!-- Section 4 -->
 <div class="row mt-4"><img src="{{ url_for('static', filename='images/bg_three.jpg') }}" alt="cocktail" class="bg-img">
 </div>
 <div class="row mt-4 mb-3">
-        <div class="col p-5 main">
-            <h1 class="text-center pt-2">DID YOU KNOW?</h1>
-            <p class="text-center px-5">Prohibition in the United States may have banned liquor, but spirits flowed
-                freely in the back alleys,
-                speakeasies, and countrysides of America.
-                In fact, many of the best cocktails came out of and survived those dry years. Some examples of
-                prohibition cockatails are Sidecar, White Lady, Mojito and Daquiri. </p>
-            <div class="col">
-                <h3 class="text-center">Daquiri</h3>
-                <ul>
-                    <li>50ml white rum</li>
-                    <li>3ml lime</li>
-                    <li>1ml sugar syrup</li>
-                </ul>
-            </div>
-
+    <div class="col p-5 main">
+        <h1 class="text-center pt-2">DID YOU KNOW?</h1>
+        <p class="text-center px-5">Prohibition in the United States may have banned liquor, but spirits flowed
+            freely in the back alleys,
+            speakeasies, and countrysides of America.
+            In fact, many of the best cocktails came out of and survived those dry years. Some examples of
+            prohibition cockatails are Sidecar, White Lady, Mojito and Daquiri. </p>
+        <div class="col">
+            <h3 class="text-center">Daquiri</h3>
+            <ul>
+                <li>50ml white rum</li>
+                <li>3ml lime</li>
+                <li>1ml sugar syrup</li>
+            </ul>
         </div>
-        <div class="col-12 col-md-6 d-none d-xl-block px-0"><img src="{{ url_for('static', filename='images/drink_four.jpg') }}"
-                alt="cocktail" class="side-img"></div>
+
     </div>
+    <div class="col-12 col-md-6 d-none d-xl-block px-0"><img
+            src="{{ url_for('static', filename='images/drink_four.jpg') }}" alt="cocktail" class="side-img"></div>
+</div>
 </div>
 
 {% endblock %}

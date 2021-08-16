@@ -38,22 +38,27 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav nav-fill w-100">
-                    <li class="nav-item mr-2 {% if page == 'index' %} active {% endif %}"><a class="nav-link" href="{{ url_for('index') }}">HOME</a></li>
-                    
-                    <li class="nav-item mr-2 {% if page == 'get_reviews' %} active {% endif %}"><a class="nav-link" href="{{ url_for('get_reviews') }}">REVIEWS</a></li>
+                    <li class="nav-item mr-2 {% if page == 'index' %} active {% endif %}"><a class="nav-link"
+                            href="{{ url_for('index') }}">HOME</a></li>
+
+                    <li class="nav-item mr-2 {% if page == 'get_reviews' %} active {% endif %}"><a class="nav-link"
+                            href="{{ url_for('get_reviews') }}">REVIEWS</a></li>
                     {% if session.user %}
-                    <li class="nav-item mr-2 {% if page == 'write_review' %} active {% endif %}"><a class="nav-link" href="{{ url_for('write_review') }}">WRITE REVIEW</a>
+                    <li class="nav-item mr-2 {% if page == 'write_review' %} active {% endif %}"><a class="nav-link"
+                            href="{{ url_for('write_review') }}">WRITE REVIEW</a>
                     </li>
                     <li class="nav-item mr-2 {% if page == 'logout' %} active {% endif %}"><a class="nav-link"
                             href="{{ url_for('logout', username=session['user']) }}">LOG OUT</a></li>
                     {% else %}
-                    <li class="nav-item mr-2 {% if page == 'login' %} active {% endif %}"><a class="nav-link" href="{{ url_for('login') }}">LOGIN</a></li>
-                    <li class="nav-item mr-2 {% if page == 'register' %} active {% endif %}"><a class="nav-link" href="{{ url_for('register') }}">REGISTER</a></li>
+                    <li class="nav-item mr-2 {% if page == 'login' %} active {% endif %}"><a class="nav-link"
+                            href="{{ url_for('login') }}">LOGIN</a></li>
+                    <li class="nav-item mr-2 {% if page == 'register' %} active {% endif %}"><a class="nav-link"
+                            href="{{ url_for('register') }}">REGISTER</a></li>
                     {% endif %}
                     <li class="d-flex">
                         <form action="{{ url_for('search') }}" method="POST" class="d-flex">
                             <input class="form-control me-2 mr-1" type="text" name="query" id="query"
-                            placeholder="Search Bars" aria-label="Search">
+                                placeholder="Search Bars" aria-label="Search">
                             <button class="btn btn-dark" type="submit">Search</button>
                         </form>
                     </li>

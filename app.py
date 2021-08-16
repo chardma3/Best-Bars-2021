@@ -68,9 +68,9 @@ def login():
                     request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Hi, {}".format(
-                        request.form.get("username")))
+                    request.form.get("username")))
                 return redirect(url_for(
-                        "get_reviews", username=session["user"]))
+                    "get_reviews", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect User Details")
@@ -122,7 +122,7 @@ def write_review():
     if not session.get("user"):
         return render_template("403.html")
 
-    #Add review to db
+    # Add review to db
     if request.method == "POST":
         review = {
             "bar_name": request.form.get("bar_name"),

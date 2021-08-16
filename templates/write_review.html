@@ -4,22 +4,26 @@
 <h3 class="text-center mt-4">Write Review</h3>
 
 <!-- Write Review Form -->
-      <div class="row form-group">
-          <div class="col">
-            <form method="POST" action="{{ url_for('write_review') }}">
-              <input type="text" class="form-control" name="bar_name" id="name" placeholder="Bar Name" minlength="2" maxlength="30" required />
-              <textarea rows="5" class="form-control" name="review" id="review" placeholder="Review" minlength="5" maxlength="400" required ></textarea>
-              <input type="text" class="form-control" name="fav_drink" id="fav_drink" placeholder="Fav Drink" minlength="2" maxlength="50" required />
-                <input type="text" class="form-control" name="location" id="location" placeholder="Location" minlength="5" maxlength="50" required />
-              <div class="row text-center">
-                <div class="col form-button">
-                  <button type="submit" class="btn btn-dark">Submit!</button>
-                </div>
-              </div>
-            </form>
-          </div>
+<div class="row form-group">
+  <div class="col">
+    <form method="POST" action="{{ url_for('write_review') }}">
+      <input type="text" class="form-control" name="bar_name" id="name" placeholder="Bar Name" minlength="2"
+        maxlength="30" required />
+      <textarea rows="5" class="form-control" name="review" id="review" placeholder="Review" minlength="5"
+        maxlength="400" required></textarea>
+      <input type="text" class="form-control" name="fav_drink" id="fav_drink" placeholder="Fav Drink" minlength="2"
+        maxlength="50" required />
+      <input type="text" class="form-control" name="location" id="location" placeholder="Location" minlength="5"
+        maxlength="50" required />
+      <div class="row text-center">
+        <div class="col form-button">
+          <button type="submit" class="btn btn-dark">Submit!</button>
         </div>
       </div>
-    </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>
 
 {% endblock %}
