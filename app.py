@@ -109,7 +109,6 @@ def search():
 
     # If no review found show flash msg
     if len(reviews) == 0:
-        print("NO REVIEW")
         flash("No review found matching your search criteria!")
         return redirect(url_for("get_reviews"))
 
