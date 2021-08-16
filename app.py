@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, session, url_for, abort)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -106,6 +106,13 @@ def get_reviews():
 def search():
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
+
+    # If no review found show flash msg
+    if len(reviews) == 0:
+        print("NO REVIEW")
+        flash("No review found matching your search criteria!")
+        return redirect(url_for("get_reviews"))
+
     return render_template("reviews.html", reviews=reviews, page="get_reviews")
 
 
