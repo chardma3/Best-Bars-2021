@@ -153,10 +153,9 @@ See below the input fields for front end validation:
                     abort(404)
                 return redirect('/')
 
-3. My mentor Precious pointed out that users not in session aka not registered or logged in were able to edit and write reviews. I fixed this by checking to make sure the user was in session. If not they were shown a 403 forbidden page.
+3. My mentor Precious pointed out that users not in session aka not registered or logged in were able to edit and write reviews. I fixed this by checking to make sure the user was in session. If they were not in session they were shown a 403 forbidden page. Here is the code in app.py file:
 
     Check for if user in session: 
-    # Only users can delete reviews
     if not session.get("user"):
         return render_template("403.html")
 

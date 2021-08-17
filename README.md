@@ -222,17 +222,6 @@ This project is hosted on Heroku - A cloud platform service that enables develop
 
 There are no differences between the deployed version and the developement version.
 
-## Local Deployment
-
-1. Navigate to the GitHub Repository.
-2. Click the Code drop down menu.
-3. Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.
-4. Open your developement editor of choice and open a terminal window in a directory of your choice.
-5. Use the git clone command in terminal followed by the copied git URL.
-6. A clone of the project will be created locally on your machine.
-
-Once the project has been loaded into an IDE of choice, run the following command in the shell to install all the required packages: pip install -r requirements.txt
-
 ### Cloning the Repository
 
 To clone the repository on GitHub and make a local copy on your computer, follow these steps:
@@ -286,6 +275,6 @@ Images used on the site have been sourced from liquor.com and delicious.com.
 
 ## Acknowledgments
 
-* Huge thanks to the gang at Code Institute Tutor Support and student Care for all their guidance, patience and support.
+* Huge thanks to the gang at Code Institute Tutor Support and student Care and my mentor for all their guidance, patience and support.
 
 <a href="#bestbars">Back to top!</a>
