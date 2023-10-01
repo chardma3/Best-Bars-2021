@@ -1,4 +1,6 @@
 import os
+import re
+import cohere
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for, abort)
@@ -14,7 +16,6 @@ app = Flask(__name__)
 # ------------------------------------------------------------- CONFIG  #
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
@@ -94,11 +95,63 @@ def logout():
 
 
 # ------------------------------------------------------------- REVIEWS  #
+def shorten_text(text, num_sentences):
+  """Shortens the given text and makes sure it ends after a full stop.
+
+  Args:
+    text: The text to shorten.
+    num_sentences: The number of sentences to return.
+
+  Returns:
+    A shorter response text containing the first `num_sentences` sentences from the given text.
+  """
+
+  # Split the text into a list of sentences.
+  sentences = re.split(r"[.!?]\s+", text)
+
+  # Iterate over the list of sentences and add the first `num_sentences` sentences to a new list.
+  shorter_sentences = []
+  for i in range(num_sentences):
+    if i < len(sentences):
+      shorter_sentences.append(sentences[i])
+    else:
+      break
+
+  # Join the sentences in the new list with a full stop at the end of each sentence.
+  shorter_text = ". ".join(shorter_sentences)
+
+  # Return the shorter response text.
+  return shorter_text
+
+
 @app.route("/get_reviews")
 # Render reviews
 def get_reviews():
     reviews = mongo.db.reviews.find()
-    return render_template("reviews.html", reviews=reviews, page="get_reviews")
+    co = cohere.Client(os.environ.get("BEARER_TOKEN"))
+
+    response = co.generate(
+    prompt='Why is the sky blue?',
+    max_tokens=200,
+    )
+
+    # Print the response text before calling the `shorter_text` function on it.
+    print(response.generations[0].text)
+
+    # Access the generated text
+    response_text = response.generations[0].text
+
+    # Shorten the response text to 3 sentences.
+    shorter_text = shorten_text(response_text, 3)
+
+    # Add a full stop to the end of the shorter response text, if it does not already have one.
+    if shorter_text[-1] != ".":
+      shorter_text += "."
+
+    print(shorter_text)
+    return render_template("reviews.html", reviews=reviews, page="get_reviews", response_text=shorter_text)
+
+
 
 
 @app.route("/search", methods=["GET", "POST"])
